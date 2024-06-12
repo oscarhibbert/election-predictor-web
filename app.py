@@ -4,7 +4,6 @@ import numpy as np
 import plotly.graph_objects as go
 from pathlib import Path
 
-# Define a function to set the page
 def set_page(page_name):
     st.session_state["current_page"] = page_name
 
@@ -31,27 +30,80 @@ if st.sidebar.button("Data"):
 if st.sidebar.button("Charts"):
             set_page("Charts")
 
+# Party Colors
+party_colors = {
+    "Labour": "#dd0018",
+    "Conservative": "#005af0",
+    "SNP": "#fff293",
+    "Liberal Democrats": "#ffa331",
+    "Plaid Cymru": "#00d4a7",
+    "UKIP": "#480c64",
+    "Green": "#00bc3e",
+    "Others": "#909090"
+}
+
+# Legend
+def display_legend():
+    legend_html = ""
+    for party, color in party_colors.items():
+        legend_html += f"<span style='font-size:20px; color:{color};'>⬣</span> <span style='font-size:15px;'>{party}</span> &nbsp;&nbsp;&nbsp;"
+    st.markdown(f"<div style='display: flex; justify-content: center; align-items: center;'>{legend_html}</div>", unsafe_allow_html=True)
+
+# Scorecards
+def display_metrics(election_year, label):
+    if election_year == 2015:
+        party_count_csv_path = Path("data/party_count/ge_2015_party_count.csv")
+    elif election_year == 2017:
+        party_count_csv_path = Path("data/party_count/ge_2017_party_count.csv")
+    elif election_year == 2019:
+        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
+    else:
+        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
+
+    party_count_df = pd.read_csv(party_count_csv_path)
+    previous_year_count = {}
+    if election_year != 2015:
+        previous_year = election_year - 2 if election_year != 2024 else 2019
+        previous_party_count_csv_path = Path(f"data/party_count/ge_{previous_year}_party_count.csv")
+        previous_party_count_df = pd.read_csv(previous_party_count_csv_path)
+        previous_year_count = dict(zip(previous_party_count_df['elected_mp_party_name'], previous_party_count_df['elected_mp_party_count']))
+
+    st.subheader(label)
+    cols = st.columns(len(party_count_df))
+    for i, (index, row) in enumerate(party_count_df.iterrows()):
+        party_name = row['elected_mp_party_name']
+        count = row['elected_mp_party_count']
+        if election_year == 2015:
+            delta = None
+            delta_color = "normal"
+        else:
+            delta = count - previous_year_count.get(party_name, 0)
+            delta_color = "normal" if delta != 0 else "off"
+
+        with cols[i]:
+            if election_year == 2015:
+                st.metric(label=party_name, value=count)
+            else:
+                st.metric(label=party_name, value=count, delta=delta, delta_color=delta_color)
+
 # Intro Page
 if st.session_state["current_page"] == "Introduction":
-    st.title("Introduction")
-    st.write("""
-        Welcome to the UK Electoral Map Project!
+                                st.title("Introduction")
+                                st.write("""
+                                            Welcome to the UK Electoral Map Project!
 
-        There is nothing here YET... go away!
-    """)
+                                            There is nothing here YET... go away!
+                                        """)
 
 # Hexmap Page Template
 def display_hexmap():
-    # Define the paths to the hex CSV file
     hex_csv_path = Path("data/uk_map_hex.csv")
-
-    # Load the hex CSV file
     hex_df = pd.read_csv(hex_csv_path)
 
-    # Create a slider in Streamlit
+    # Slider
     election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
 
-    # Load the appropriate constituency CSV file based on the selected year
+    # Loading CSVs
     if election_year == 2015:
         constituency_csv_path = Path("data/ge_2015_constituencies.csv")
     elif election_year == 2017:
@@ -66,20 +118,20 @@ def display_hexmap():
     # Merge the hex DataFrame with the constituency data DataFrame
     merged = hex_df.merge(constituency_df, left_on='constituency_name', right_on='constituency_name')
 
-    # Define a function to calculate hexagon coordinates based on the "odd-r" formation
+    # Calculate hexagon coordinates
     def calc_coords(row, col):
         if row % 2 == 1:
             col = col + 0.5
         row = row * np.sqrt(3) / 2
         return col, row
 
-    # Generate hexagon coordinates
+    # Generate Hexagons with Coords
     merged['coords'] = merged.apply(lambda row: calc_coords(row['coord_two'], row['coord_one']), axis=1)
     merged[['x', 'y']] = pd.DataFrame(merged['coords'].tolist(), index=merged.index)
 
     fig = go.Figure()
 
-    # Add hexagons to the figure
+    # Add Hexagons
     for _, row in merged.iterrows():
         fig.add_trace(go.Scatter(
             x=[row['x']],
@@ -91,7 +143,6 @@ def display_hexmap():
             hoverinfo='text'
         ))
 
-    # Update layout
     fig.update_layout(
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=False),
@@ -102,37 +153,39 @@ def display_hexmap():
         showlegend=False
     )
 
-    # Display the plot in Streamlit
+    display_legend()
     st.plotly_chart(fig)
+    display_metrics(election_year, "Constituency Seat Count")
+    display_metrics(election_year, "National Vote Share")
 
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
-    st.title("Polling Model")
-    display_hexmap()
+                                st.title("Polling Model")
+                                display_hexmap()
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
-    st.title("Polling + Eco Model")
-    display_hexmap()
+                                st.title("Polling + Eco Model")
+                                display_hexmap()
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
-    st.title("Polling + Eco + Alt Data")
-    display_hexmap()
+                                st.title("Polling + Eco + Alt Data")
+                                display_hexmap()
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
-    st.title("Polling + Eco + Alt Sentiment")
-    display_hexmap()
+                                st.title("Polling + Eco + Alt Sentiment")
+                                display_hexmap()
 
 # Methodology Page
 elif st.session_state["current_page"] == "Methodology":
-    st.title("Methodology")
+                                st.title("Methodology")
 
 # Data Page
 elif st.session_state["current_page"] == "Data":
-    st.title("Data")
+                                st.title("Data")
 
 # Charts Page
 elif st.session_state["current_page"] == "Charts":
-    st.title("Charts")
+                                st.title("Charts")
