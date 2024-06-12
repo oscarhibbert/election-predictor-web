@@ -14,21 +14,21 @@ if "current_page" not in st.session_state:
 # Pages Menu
 st.sidebar.title("Navigation")
 if st.sidebar.button("Introduction"):
-            set_page("Introduction")
+    set_page("Introduction")
 if st.sidebar.button("Polling Model"):
-            set_page("Polling Model")
+    set_page("Polling Model")
 if st.sidebar.button("Polling + Eco Model"):
-            set_page("Polling + Eco Model")
+    set_page("Polling + Eco Model")
 if st.sidebar.button("Polling + Eco + Alt Data"):
-            set_page("Polling + Eco + Alt Data")
+    set_page("Polling + Eco + Alt Data")
 if st.sidebar.button("Polling + Eco + Alt Sentiment"):
-            set_page("Polling + Eco + Alt Sentiment")
+    set_page("Polling + Eco + Alt Sentiment")
 if st.sidebar.button("Methodology"):
-            set_page("Methodology")
+    set_page("Methodology")
 if st.sidebar.button("Data"):
-            set_page("Data")
+    set_page("Data")
 if st.sidebar.button("Charts"):
-            set_page("Charts")
+    set_page("Charts")
 
 # Party Colors
 party_colors = {
@@ -43,10 +43,21 @@ party_colors = {
 }
 
 # Legend
-def display_legend():
+def display_legend(election_year):
+    if election_year == 2015:
+        party_count_csv_path = Path("data/party_count/ge_2015_party_count.csv")
+    elif election_year == 2017:
+        party_count_csv_path = Path("data/party_count/ge_2017_party_count.csv")
+    elif election_year == 2019:
+        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
+    else:
+        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
+
+    party_count_df = pd.read_csv(party_count_csv_path)
     legend_html = ""
     for party, color in party_colors.items():
-        legend_html += f"<span style='font-size:20px; color:{color};'>⬣</span> <span style='font-size:15px;'>{party}</span> &nbsp;&nbsp;&nbsp;"
+        if party in party_count_df['elected_mp_party_name'].values:
+            legend_html += f"<span style='font-size:20px; color:{color};'>⬣</span> <span style='font-size:15px;'>{party}</span> &nbsp;&nbsp;&nbsp;"
     st.markdown(f"<div style='display: flex; justify-content: center; align-items: center;'>{legend_html}</div>", unsafe_allow_html=True)
 
 # Scorecards
@@ -68,7 +79,7 @@ def display_metrics(election_year, label):
         previous_party_count_df = pd.read_csv(previous_party_count_csv_path)
         previous_year_count = dict(zip(previous_party_count_df['elected_mp_party_name'], previous_party_count_df['elected_mp_party_count']))
 
-    st.subheader(label)
+    st.write(label)
     cols = st.columns(len(party_count_df))
     for i, (index, row) in enumerate(party_count_df.iterrows()):
         party_name = row['elected_mp_party_name']
@@ -88,18 +99,15 @@ def display_metrics(election_year, label):
 
 # Intro Page
 if st.session_state["current_page"] == "Introduction":
-                                st.title("Introduction")
-                                st.write("""
-                                            Welcome to the UK Electoral Map Project!
+    st.title("Introduction")
+    st.write("""
+        Welcome to the UK Electoral Map Project!
 
-                                            There is nothing here YET... go away!
-                                        """)
+        There is nothing here YET... go away!
+    """)
 
 # Hexmap Page Template
 def display_hexmap():
-    hex_csv_path = Path("data/uk_map_hex.csv")
-    hex_df = pd.read_csv(hex_csv_path)
-
     # Slider
     election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
 
@@ -115,24 +123,21 @@ def display_hexmap():
 
     constituency_df = pd.read_csv(constituency_csv_path)
 
-    # Merge the hex DataFrame with the constituency data DataFrame
-    merged = hex_df.merge(constituency_df, left_on='constituency_name', right_on='constituency_name')
-
-    # Calculate hexagon coordinates
+    # Define a function to calculate hexagon coordinates based on the "odd-r" formation
     def calc_coords(row, col):
         if row % 2 == 1:
             col = col + 0.5
         row = row * np.sqrt(3) / 2
         return col, row
 
-    # Generate Hexagons with Coords
-    merged['coords'] = merged.apply(lambda row: calc_coords(row['coord_two'], row['coord_one']), axis=1)
-    merged[['x', 'y']] = pd.DataFrame(merged['coords'].tolist(), index=merged.index)
+    # Generate hexagon coordinates
+    constituency_df['coords'] = constituency_df.apply(lambda row: calc_coords(row['coord_two'], row['coord_one']), axis=1)
+    constituency_df[['x', 'y']] = pd.DataFrame(constituency_df['coords'].tolist(), index=constituency_df.index)
 
     fig = go.Figure()
 
-    # Add Hexagons
-    for _, row in merged.iterrows():
+    # Add hexagons to the figure
+    for _, row in constituency_df.iterrows():
         fig.add_trace(go.Scatter(
             x=[row['x']],
             y=[row['y']],
@@ -143,6 +148,7 @@ def display_hexmap():
             hoverinfo='text'
         ))
 
+    # Update layout
     fig.update_layout(
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=False),
@@ -153,39 +159,39 @@ def display_hexmap():
         showlegend=False
     )
 
-    display_legend()
+    display_legend(election_year)
     st.plotly_chart(fig)
     display_metrics(election_year, "Constituency Seat Count")
     display_metrics(election_year, "National Vote Share")
 
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
-                                st.title("Polling Model")
-                                display_hexmap()
+    st.title("Polling Model")
+    display_hexmap()
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
-                                st.title("Polling + Eco Model")
-                                display_hexmap()
+    st.title("Polling + Eco Model")
+    display_hexmap()
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
-                                st.title("Polling + Eco + Alt Data")
-                                display_hexmap()
+    st.title("Polling + Eco + Alt Data")
+    display_hexmap()
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
-                                st.title("Polling + Eco + Alt Sentiment")
-                                display_hexmap()
+    st.title("Polling + Eco + Alt Sentiment")
+    display_hexmap()
 
 # Methodology Page
 elif st.session_state["current_page"] == "Methodology":
-                                st.title("Methodology")
+    st.title("Methodology")
 
 # Data Page
 elif st.session_state["current_page"] == "Data":
-                                st.title("Data")
+    st.title("Data")
 
 # Charts Page
 elif st.session_state["current_page"] == "Charts":
-                                st.title("Charts")
+    st.title("Charts")
