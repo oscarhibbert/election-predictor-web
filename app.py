@@ -106,12 +106,20 @@ if st.session_state["current_page"] == "Introduction":
         There is nothing here YET... go away!
     """)
 
+# Handle slider for election year
+def election_year_slider():
+    # Slider
+    election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
+
+    return election_year
+
 # Hexmap Page Template
-def display_hexmap(data_path_2010:str, data_path_2015:str, data_path_2017:str,
+def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, data_path_2017:str,
                    data_path_2019:str, data_path_2024:str):
     """
     Generates a hexmap of the UK constituency seats, coloured by winning parties.
 
+    :param election_year: The election year.
     :param data_path_2010: Path to the 2010 election data.
     :param data_path_2015: Path to the 2015 election data.
     :param data_path_2017: Path to the 2017 election data.
@@ -120,8 +128,6 @@ def display_hexmap(data_path_2010:str, data_path_2015:str, data_path_2017:str,
 
     :return: Hexmap.
     """
-    # Slider
-    election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
 
     # CSV Path Variable
     csv_path = None
@@ -185,22 +191,26 @@ def display_hexmap(data_path_2010:str, data_path_2015:str, data_path_2017:str,
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
     st.title("Polling Model")
-    display_hexmap()
+    election_year = election_year_slider()
+    display_hexmap(election_year)
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
     st.title("Polling + Eco Model")
-    display_hexmap()
+    election_year = election_year_slider()
+    display_hexmap(election_year)
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
     st.title("Polling + Eco + Alt Data")
-    display_hexmap()
+    election_year = election_year_slider()
+    display_hexmap(election_year)
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
     st.title("Polling + Eco + Alt Sentiment")
-    display_hexmap()
+    election_year = election_year_slider()
+    display_hexmap(election_year)
 
 # Methodology Page
 elif st.session_state["current_page"] == "Methodology":
