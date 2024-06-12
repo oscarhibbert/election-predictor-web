@@ -107,21 +107,38 @@ if st.session_state["current_page"] == "Introduction":
     """)
 
 # Hexmap Page Template
-def display_hexmap():
+def display_hexmap(data_path_2010:str, data_path_2015:str, data_path_2017:str,
+                   data_path_2019:str, data_path_2024:str):
+    """
+    Generates a hexmap of the UK constituency seats, coloured by winning parties.
+
+    :param data_path_2010: Path to the 2010 election data.
+    :param data_path_2015: Path to the 2015 election data.
+    :param data_path_2017: Path to the 2017 election data.
+    :param data_path_2019: Path to the 2019 election data.
+    :param data_path_2024: Path to the 2024 election data.
+
+    :return: Hexmap.
+    """
     # Slider
     election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
 
-    # Loading CSVs
-    if election_year == 2015:
-        constituency_csv_path = Path("data/ge_2015_constituencies.csv")
-    elif election_year == 2017:
-        constituency_csv_path = Path("data/ge_2017_constituencies.csv")
-    elif election_year == 2019:
-        constituency_csv_path = Path("data/ge_2019_constituencies.csv")
-    else:
-        constituency_csv_path = Path("data/ge_2019_constituencies.csv")
+    # CSV Path Variable
+    csv_path = None
 
-    constituency_df = pd.read_csv(constituency_csv_path)
+    # Loading CSVs
+    if election_year == 2010:
+        csv_path = data_path_2010
+    elif election_year == 2015:
+        csv_path = data_path_2015
+    elif election_year == 2017:
+        csv_path = data_path_2017
+    elif election_year == 2019:
+        csv_path = data_path_2019
+    elif election_year == 2024:
+        csv_path = data_path_2024
+
+    constituency_df = pd.read_csv(csv_path)
 
     # Define a function to calculate hexagon coordinates based on the "odd-r" formation
     def calc_coords(row, col):
