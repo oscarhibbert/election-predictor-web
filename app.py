@@ -181,6 +181,7 @@ def display_hexmap(data_path_2010:str, data_path_2015:str, data_path_2017:str,
     display_metrics(election_year, "Constituency Seat Count")
     display_metrics(election_year, "National Vote Share")
 
+#TODO Provide CSV paths in display_hexmap function params for each page
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
     st.title("Polling Model")
