@@ -109,7 +109,7 @@ if st.session_state["current_page"] == "Introduction":
 # Handle slider for election year
 def election_year_slider():
     # Slider
-    election_year = st.select_slider('Select election year:', options=[2015, 2017, 2019, 2024])
+    election_year = st.select_slider('Select election year:', options=[2010, 2015, 2017, 2019, 2024])
 
     return election_year
 
@@ -182,7 +182,6 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         showlegend=False
     )
 
-    display_legend(election_year)
     st.plotly_chart(fig)
     display_metrics(election_year, "Constituency Seat Count")
     display_metrics(election_year, "National Vote Share")
@@ -192,24 +191,28 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
 if st.session_state["current_page"] == "Polling Model":
     st.title("Polling Model")
     election_year = election_year_slider()
+    display_legend(election_year)
     display_hexmap(election_year)
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
     st.title("Polling + Eco Model")
     election_year = election_year_slider()
+    display_legend(election_year)
     display_hexmap(election_year)
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
     st.title("Polling + Eco + Alt Data")
     election_year = election_year_slider()
+    display_legend(election_year)
     display_hexmap(election_year)
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
     st.title("Polling + Eco + Alt Sentiment")
     election_year = election_year_slider()
+    display_legend(election_year)
     display_hexmap(election_year)
 
 # Methodology Page
