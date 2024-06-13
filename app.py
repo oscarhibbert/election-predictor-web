@@ -39,11 +39,11 @@ if st.sidebar.button("Methodology"):
 st.sidebar.header("Models")
 if st.sidebar.button("Polls Model"):
     set_page("Polling Model")
-if st.sidebar.button("Polls & Econ Model"):
+if st.sidebar.button("Polls & Economics Model"):
     set_page("Polling + Econ Model")
 if st.sidebar.button("Polls & Social Media Model"):
     set_page("Polling + Social Media Model")
-if st.sidebar.button("Polls, Econ, Social Media Model"):
+if st.sidebar.button("Polls, Economics & Social Media Model"):
     set_page("Polling + Econ + Social Media Model")
 # if st.sidebar.button("Data"):
 #     set_page("Data")
@@ -94,7 +94,7 @@ def election_year_slider():
     election_year = None
 
     with col2:
-        election_year = st.select_slider('Select election year:', options=[2010, 2015, 2017, 2019, 2024])
+        election_year = st.select_slider('Select election year:', options=[2010, 2015, 2017, 2019, 2024], value=2019)
 
     return election_year
 
@@ -256,7 +256,6 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
 
 
 # Handle rendering of pages
-
 # Introduction Page
 if st.session_state["current_page"] == "Introduction":
     st.title("Introduction")
@@ -325,7 +324,7 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
     col1, col2, col3 = st.columns([1,3,1])
 
     with col2:
-        st.title("Polls & Eco Model")
+        st.title("Polling & Economics Model")
 
     election_year = election_year_slider()
 
@@ -419,7 +418,7 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
     col1, col2, col3 = st.columns([1,3,1])
 
     with col2:
-        st.title("Polls, Econ & Social Media Model")
+        st.title("Polls, Economics & Social Media Model")
 
     election_year = election_year_slider()
 
