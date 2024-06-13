@@ -1,2 +1,3 @@
 /data
-/.vscode
+.vscode/
+.env
