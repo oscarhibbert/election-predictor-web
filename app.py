@@ -27,6 +27,14 @@ st.markdown(
 def set_page(page_name):
     st.session_state["current_page"] = page_name
 
+# Always Start on "Polling + Econ + Social Media Model"
+if "current_page" not in st.session_state:
+    st.session_state["current_page"] = "Polling + Econ + Social Media Model"
+
+
+def set_page(page_name):
+    st.session_state["current_page"] = page_name
+
 # Always Start on Introduction
 if "current_page" not in st.session_state:
     st.session_state["current_page"] = "Introduction"
@@ -228,6 +236,8 @@ def display_constituency_seat_metrics(election_year, label, data_path_2010:str, 
             with cols[i]:
                 st.metric(label=party_name, value=predicted_count, delta=delta, delta_color=delta_color)
 
+    st.write("*Delta markers display the difference between our model prediction and actual results*")
+
 def display_vote_share_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
                                       data_path_2019:str, data_path_2024:str):
 
@@ -268,6 +278,7 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
                 st.metric(label=party_name, value=str(predicted_share) + "%", delta=delta, delta_color=delta_color)
 
 
+
 # Handle rendering of pages
 # Introduction Page
 if st.session_state["current_page"] == "Introduction":
@@ -294,6 +305,8 @@ if st.session_state["current_page"] == "Polling Model":
     with col2:
         st.title(f"Polling Model – {election_year} Election Prediction")
 
+    st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
+
     display_vote_share_metrics(
         election_year,
         f"National Vote Share",
@@ -304,6 +317,8 @@ if st.session_state["current_page"] == "Polling Model":
         "data/polls_model/vote_share/polls_model_vote_share_2024.csv",
     )
 
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
     display_constituency_seat_metrics(
         election_year,
         "Constituency Seat Count",
@@ -313,6 +328,10 @@ if st.session_state["current_page"] == "Polling Model":
         "data/polls_model/seat_share/polls_model_seat_share_2019.csv",
         "data/polls_model/seat_share/polls_model_seat_share_2024.csv",
     )
+
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
+    st.markdown(f"<div style='display: flex; justify-content: center; align-items: center; font-size:1.8rem; font-weight: 600; margin: 0.5rem 0'>Constituency Seat Map</div>", unsafe_allow_html=True)
 
     display_legend(
         election_year,
@@ -341,6 +360,8 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
     with col2:
         st.title(f"Polling & Economics Model – {election_year} Election Prediction")
 
+    st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
+
     display_vote_share_metrics(
         election_year,
         "National Vote Share",
@@ -351,6 +372,8 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
         "data/polls_econ_model/vote_share/polls_model_econ_vote_share_2024.csv",
     )
 
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
     display_constituency_seat_metrics(
         election_year,
         "Constituency Seat Count",
@@ -360,6 +383,10 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
         "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2019.csv",
         "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2024.csv",
     )
+
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
+    st.markdown(f"<div style='display: flex; justify-content: center; align-items: center; font-size:1.8rem; font-weight: 600; margin: 0.5rem 0'>Constituency Seat Map</div>", unsafe_allow_html=True)
 
     display_legend(
         election_year,
@@ -388,6 +415,8 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
     with col2:
         st.title(f"Polling & Social Media Model – {election_year} Election Prediction")
 
+    st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
+
     display_vote_share_metrics(
         election_year,
         "National Vote Share",
@@ -398,6 +427,8 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
         "data/polls_alt_model/vote_share/polls_alt_model_vote_share_2024.csv",
     )
 
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
     display_constituency_seat_metrics(
         election_year,
         "Constituency Seat Count",
@@ -407,6 +438,10 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
         "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2019.csv",
         "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2024.csv",
     )
+
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
+    st.markdown(f"<div style='display: flex; justify-content: center; align-items: center; font-size:1.8rem; font-weight: 600; margin: 0.5rem 0'>Constituency Seat Map</div>", unsafe_allow_html=True)
 
     display_legend(
         election_year,
@@ -435,6 +470,8 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
     with col2:
         st.title(f"Polls, Economics & Social Media Model – {election_year} Election Prediction")
 
+    st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
+
     display_vote_share_metrics(
         election_year,
         "National Vote Share",
@@ -445,6 +482,8 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
         "data/polls_econ_alt_model/vote_share/polls_eco_alt_model_vote_share_2024.csv",
     )
 
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
     display_constituency_seat_metrics(
         election_year,
         "Constituency Seat Count",
@@ -454,6 +493,10 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
         "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2019.csv",
         "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2024.csv",
     )
+
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
+
+    st.markdown(f"<div style='display: flex; justify-content: center; align-items: center; font-size:1.8rem; font-weight: 600; margin: 0.5rem 0'>Constituency Seat Map</div>", unsafe_allow_html=True)
 
     display_legend(
         election_year,
