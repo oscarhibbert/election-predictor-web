@@ -131,9 +131,9 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
 
         # Define a function to calculate hexagon coordinates based on the "odd-r" formation
         def calc_coords(row, col):
-            if row % 2 == 1:
-                col = col + 0.5
-            row = row * np.sqrt(3) / 2
+            if col % 2 == 1:
+                row = row + 0.5
+            col = col * np.sqrt(3) / 2
             return col, row
 
         # Generate hexagon coordinates
