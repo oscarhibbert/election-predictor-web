@@ -60,43 +60,6 @@ def display_legend(election_year):
             legend_html += f"<span style='font-size:20px; color:{color};'>⬣</span> <span style='font-size:15px;'>{party}</span> &nbsp;&nbsp;&nbsp;"
     st.markdown(f"<div style='display: flex; justify-content: center; align-items: center;'>{legend_html}</div>", unsafe_allow_html=True)
 
-# Scorecards
-def display_metrics(election_year, label):
-    if election_year == 2015:
-        party_count_csv_path = Path("data/party_count/ge_2015_party_count.csv")
-    elif election_year == 2017:
-        party_count_csv_path = Path("data/party_count/ge_2017_party_count.csv")
-    elif election_year == 2019:
-        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
-    else:
-        party_count_csv_path = Path("data/party_count/ge_2019_party_count.csv")
-
-    party_count_df = pd.read_csv(party_count_csv_path)
-    previous_year_count = {}
-    if election_year != 2015:
-        previous_year = election_year - 2 if election_year != 2024 else 2019
-        previous_party_count_csv_path = Path(f"data/party_count/ge_{previous_year}_party_count.csv")
-        previous_party_count_df = pd.read_csv(previous_party_count_csv_path)
-        previous_year_count = dict(zip(previous_party_count_df['elected_mp_party_name'], previous_party_count_df['elected_mp_party_count']))
-
-    st.write(label)
-    cols = st.columns(len(party_count_df))
-    for i, (index, row) in enumerate(party_count_df.iterrows()):
-        party_name = row['elected_mp_party_name']
-        count = row['elected_mp_party_count']
-        if election_year == 2015:
-            delta = None
-            delta_color = "normal"
-        else:
-            delta = count - previous_year_count.get(party_name, 0)
-            delta_color = "normal" if delta != 0 else "off"
-
-        with cols[i]:
-            if election_year == 2015:
-                st.metric(label=party_name, value=count)
-            else:
-                st.metric(label=party_name, value=count, delta=delta, delta_color=delta_color)
-
 # Intro Page
 if st.session_state["current_page"] == "Introduction":
     st.title("Introduction")
@@ -183,8 +146,109 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
     )
 
     st.plotly_chart(fig)
-    display_metrics(election_year, "Constituency Seat Count")
-    display_metrics(election_year, "National Vote Share")
+
+# Scorecards
+def display_constituency_seat_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
+                   data_path_2019:str, data_path_2024:str):
+
+    data_path = None
+
+    # Set the path based on the election year
+    if election_year == 2010:
+        data_path = data_path_2010
+    elif election_year == 2015:
+        data_path = data_path_2015
+    elif election_year == 2017:
+        data_path = data_path_2017
+    elif election_year == 2019:
+        data_path = data_path_2019
+    elif election_year == 2024:
+        data_path = data_path_2024
+
+    party_count_df = pd.read_csv(data_path)
+    previous_year_count = {}
+
+    # Compute previous year counts if the election year is not 2010
+    if election_year != 2010:
+        if election_year == 2015:
+            previous_year = 2010
+        else:
+            previous_year = election_year - 2 if election_year != 2024 else 2019
+        previous_party_count_csv_path = Path(f"data/party_count/ge_{previous_year}_party_count.csv")
+        previous_party_count_df = pd.read_csv(previous_party_count_csv_path)
+        previous_year_count = dict(zip(previous_party_count_df['elected_mp_party_name'], previous_party_count_df['elected_mp_party_count']))
+
+    st.write(label)
+    cols = st.columns(len(party_count_df))
+    for i, (index, row) in enumerate(party_count_df.iterrows()):
+        party_name = row['elected_mp_party_name']
+        count = row['elected_mp_party_count']
+
+        # Set delta and delta_color only if there is a previous year to compare
+        if election_year == 2010:
+            delta = None
+            delta_color = "normal"
+        else:
+            delta = count - previous_year_count.get(party_name, 0)
+            delta_color = "normal" if delta != 0 else "off"
+
+        with cols[i]:
+            if election_year == 2010:
+                st.metric(label=party_name, value=count)
+            else:
+                st.metric(label=party_name, value=count, delta=delta, delta_color=delta_color)
+
+
+def display_vote_share_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
+                   data_path_2019:str, data_path_2024:str):
+    # Define paths based on election year
+    data_path = None
+
+    # Set the path based on the election year
+    if election_year == 2010:
+        data_path = data_path_2010
+    elif election_year == 2015:
+        data_path = data_path_2015
+    elif election_year == 2017:
+        data_path = data_path_2017
+    elif election_year == 2019:
+        data_path = data_path_2019
+    elif election_year == 2024:
+        data_path = data_path_2024
+
+    party_count_df = pd.read_csv(data_path)
+    previous_year_vote_share = {}
+
+    # Compute previous year vote shares if the election year is not 2010
+    if election_year != 2010:
+        if election_year == 2015:
+            previous_year = 2010
+        else:
+            previous_year = election_year - 2 if election_year != 2024 else 2019
+        previous_vote_share_csv_path = Path(f"data/vote_share/ge_{previous_year}_vote_share.csv")
+        previous_vote_share_df = pd.read_csv(previous_vote_share_csv_path)
+        previous_year_vote_share = dict(zip(previous_vote_share_df['party_code'], previous_vote_share_df['mean_average']))
+
+    st.write(label)
+    cols = st.columns(len(party_count_df))
+    for i, (index, row) in enumerate(party_count_df.iterrows()):
+        party_code = row['party_code']
+        mean_average = row['mean_average']
+
+        # Set delta and delta_color only if there is a previous year to compare
+        if election_year == 2010:
+            delta = None
+            delta_color = "normal"
+        else:
+            delta = mean_average - previous_year_vote_share.get(party_code, 0)
+            delta_color = "normal" if delta != 0 else "off"
+
+        with cols[i]:
+            if election_year == 2010:
+                st.metric(label=party_code, value=f"{mean_average}%")
+            else:
+                st.metric(label=party_code, value=f"{mean_average}%", delta=f"{delta}%", delta_color=delta_color)
+
 
 #TODO Provide CSV paths in display_hexmap function params for each page
 # Polling Model Page
@@ -192,7 +256,9 @@ if st.session_state["current_page"] == "Polling Model":
     st.title("Polling Model")
     election_year = election_year_slider()
     display_legend(election_year)
-    display_hexmap(election_year)
+    # display_hexmap(election_year)
+    display_constituency_seat_metrics(election_year, "Constituency Seat Count")
+    display_vote_share_metrics(election_year, "National Vote Share")
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
