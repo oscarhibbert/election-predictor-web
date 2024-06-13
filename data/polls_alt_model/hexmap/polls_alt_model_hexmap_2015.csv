@@ -1,0 +1,651 @@
+Constituency,Winner,elected_mp_party,elected_mp_party_name,color,constituency_name,coord_one,coord_two
+Aberafan Maesteg,LAB,Lab,Labour,#dd0018,Aberafan Maesteg,-36,46
+Aldershot,CON,Con,Conservative,#005af0,Aldershot,-40,56
+Aldridge-Brownhills,CON,Con,Conservative,#005af0,Aldridge-Brownhills,-30,56
+Altrincham and Sale West,CON,Con,Conservative,#005af0,Altrincham and Sale West,-25,52
+Alyn and Deeside,LAB,Lab,Labour,#dd0018,Alyn and Deeside,-29,49
+Amber Valley,CON,Con,Conservative,#005af0,Amber Valley,-27,58
+Arundel and South Downs,CON,Con,Conservative,#005af0,Arundel and South Downs,-44,61
+Ashfield,LAB,Lab,Labour,#dd0018,Ashfield,-27,60
+Ashford,CON,Con,Conservative,#005af0,Ashford,-42,72
+Ashton under Lyne,LAB,Lab,Labour,#dd0018,Ashton under Lyne,-23,54
+Aylesbury,CON,Con,Conservative,#005af0,Aylesbury,-35,60
+Banbury,CON,Con,Conservative,#005af0,Banbury,-33,58
+Bangor Aberconwy,CON,Con,Conservative,#005af0,Bangor Aberconwy,-31,47
+Barking,LAB,Lab,Labour,#dd0018,Barking,-38,68
+Barnsley North,LAB,Lab,Labour,#dd0018,Barnsley North,-23,57
+Barnsley South,LAB,Lab,Labour,#dd0018,Barnsley South,-23,58
+Barrow and Furness,LAB,Lab,Labour,#dd0018,Barrow and Furness,-16,54
+Basildon and Billericay,CON,Con,Conservative,#005af0,Basildon and Billericay,-34,67
+Basingstoke,CON,Con,Conservative,#005af0,Basingstoke,-39,55
+Bassetlaw,LAB,Lab,Labour,#dd0018,Bassetlaw,-26,61
+Bath,LIB,LD,Liberal Democrats,#ffa331,Bath,-40,51
+Battersea,LAB,Lab,Labour,#dd0018,Battersea,-41,62
+Beaconsfield,CON,Con,Conservative,#005af0,Beaconsfield,-37,57
+Beckenham and Penge,CON,Con,Conservative,#005af0,Beckenham and Penge,-43,65
+Bedford,LAB,Lab,Labour,#dd0018,Bedford,-32,63
+Belfast East,OTH,Others,Others,#909090,Belfast East,-17,45
+Belfast North,OTH,Others,Others,#909090,Belfast North,-16,45
+Belfast South and Mid Down,OTH,Others,Others,#909090,Belfast South and Mid Down,-18,45
+Belfast West,OTH,Others,Others,#909090,Belfast West,-17,44
+Bermondsey and Old Southwark,LAB,Lab,Labour,#dd0018,Bermondsey and Old Southwark,-40,64
+Bethnal Green and Stepney,LAB,Lab,Labour,#dd0018,Bethnal Green and Stepney,-39,65
+Beverley and Holderness,CON,Con,Conservative,#005af0,Beverley and Holderness,-22,64
+Bexhill and Battle,CON,Con,Conservative,#005af0,Bexhill and Battle,-44,70
+Bexleyheath and Crayford,CON,Con,Conservative,#005af0,Bexleyheath and Crayford,-39,67
+Bicester and Woodstock,CON,Con,Conservative,#005af0,Bicester and Woodstock,-34,59
+Birkenhead,LAB,Lab,Labour,#dd0018,Birkenhead,-27,49
+Birmingham Edgbaston,LAB,Lab,Labour,#dd0018,Birmingham Edgbaston,-33,53
+Birmingham Erdington,LAB,Lab,Labour,#dd0018,Birmingham Erdington,-31,54
+Birmingham Hall Green and Moseley,LAB,Lab,Labour,#dd0018,Birmingham Hall Green and Moseley,-32,55
+Birmingham Hodge Hill and Solihull North,LAB,Lab,Labour,#dd0018,Birmingham Hodge Hill and Solihull North,-31,55
+Birmingham Ladywood,LAB,Lab,Labour,#dd0018,Birmingham Ladywood,-32,54
+Birmingham Northfield,LAB,Lab,Labour,#dd0018,Birmingham Northfield,-34,54
+Birmingham Perry Barr,LAB,Lab,Labour,#dd0018,Birmingham Perry Barr,-31,53
+Birmingham Selly Oak,LAB,Lab,Labour,#dd0018,Birmingham Selly Oak,-33,54
+Birmingham Yardley,LAB,Lab,Labour,#dd0018,Birmingham Yardley,-32,56
+Bishop Auckland,LAB,Lab,Labour,#dd0018,Bishop Auckland,-14,54
+Blackburn,LAB,Lab,Labour,#dd0018,Blackburn,-19,53
+Blackley and Middleton South,LAB,Lab,Labour,#dd0018,Blackley and Middleton South,-23,53
+Blackpool North and Fleetwood,LAB,Lab,Labour,#dd0018,Blackpool North and Fleetwood,-18,53
+Blackpool South,LAB,Lab,Labour,#dd0018,Blackpool South,-18,52
+Blaenau Gwent and Rhymney,LAB,Lab,Labour,#dd0018,Blaenau Gwent and Rhymney,-33,49
+Blaydon and Consett,LAB,Lab,Labour,#dd0018,Blaydon and Consett,-14,55
+Blyth and Ashington,LAB,Lab,Labour,#dd0018,Blyth and Ashington,-12,55
+Bognor Regis and Littlehampton,CON,Con,Conservative,#005af0,Bognor Regis and Littlehampton,-44,63
+Bolsover,LAB,Lab,Labour,#dd0018,Bolsover,-26,60
+Bolton North East,LAB,Lab,Labour,#dd0018,Bolton North East,-21,52
+Bolton South and Walkden,LAB,Lab,Labour,#dd0018,Bolton South and Walkden,-22,52
+Bolton West,LAB,Lab,Labour,#dd0018,Bolton West,-21,51
+Bootle,LAB,Lab,Labour,#dd0018,Bootle,-22,49
+Boston and Skegness,CON,Con,Conservative,#005af0,Boston and Skegness,-26,64
+Bournemouth East,CON,Con,Conservative,#005af0,Bournemouth East,-43,52
+Bournemouth West,CON,Con,Conservative,#005af0,Bournemouth West,-42,52
+Bracknell,CON,Con,Conservative,#005af0,Bracknell,-39,56
+Bradford East,LAB,Lab,Labour,#dd0018,Bradford East,-20,58
+Bradford South,LAB,Lab,Labour,#dd0018,Bradford South,-21,56
+Bradford West,LAB,Lab,Labour,#dd0018,Bradford West,-20,57
+Braintree,CON,Con,Conservative,#005af0,Braintree,-31,67
+"Brecon, Radnor and Cwm Tawe",CON,Con,Conservative,#005af0,"Brecon, Radnor and Cwm Tawe",-32,50
+Brent East,LAB,Lab,Labour,#dd0018,Brent East,-38,61
+Brent West,LAB,Lab,Labour,#dd0018,Brent West,-38,60
+Brentford and Isleworth,LAB,Lab,Labour,#dd0018,Brentford and Isleworth,-40,60
+Brentwood and Ongar,CON,Con,Conservative,#005af0,Brentwood and Ongar,-33,66
+Bridgend,LAB,Lab,Labour,#dd0018,Bridgend,-37,46
+Bridgwater,CON,Con,Conservative,#005af0,Bridgwater,-41,48
+Bridgwater and West Somerset,CON,Con,Conservative,#005af0,Bridgwater and West Somerset,-41,48
+Bridlington and The Wolds,CON,Con,Conservative,#005af0,Bridlington and The Wolds,-20,63
+Brigg and Immingham,CON,Con,Conservative,#005af0,Brigg and Immingham,-24,62
+Brighton Kemptown and Peacehaven,LAB,Lab,Labour,#dd0018,Brighton Kemptown and Peacehaven,-45,67
+Brighton Pavilion,GRE,Green,Green,#00bc3e,Brighton Pavilion,-44,67
+Bristol Central,LAB,Lab,Labour,#dd0018,Bristol Central,-38,51
+Bristol East,LAB,Lab,Labour,#dd0018,Bristol East,-38,52
+Bristol North West,LAB,Lab,Labour,#dd0018,Bristol North West,-38,50
+Bristol South,LAB,Lab,Labour,#dd0018,Bristol South,-39,51
+Broadland and Fakenham,CON,Con,Conservative,#005af0,Broadland and Fakenham,-27,66
+Bromley and Biggin Hill,CON,Con,Conservative,#005af0,Bromley and Biggin Hill,-42,67
+Bromsgrove,CON,Con,Conservative,#005af0,Bromsgrove,-33,52
+Broxbourne,CON,Con,Conservative,#005af0,Broxbourne,-35,66
+Broxtowe,LAB,Lab,Labour,#dd0018,Broxtowe,-27,59
+Buckingham and Bletchley,OTH,Others,Others,#909090,Buckingham and Bletchley,-34,60
+Burnley,LAB,Lab,Labour,#dd0018,Burnley,-19,55
+Burton and Uttoxeter,CON,Con,Conservative,#005af0,Burton and Uttoxeter,-28,56
+Bury North,LAB,Lab,Labour,#dd0018,Bury North,-21,53
+Bury South,LAB,Lab,Labour,#dd0018,Bury South,-22,53
+Bury St Edmunds and Stowmarket,CON,Con,Conservative,#005af0,Bury St Edmunds and Stowmarket,-31,68
+Caerfyrddin,PLC,PC,Plaid Cymru,#00d4a7,Caerfyrddin,-32,49
+Caernarfon,PLC,PC,Plaid Cymru,#00d4a7,Caernarfon,-35,49
+Calder Valley,CON,Con,Conservative,#005af0,Calder Valley,-20,56
+Camborne and Redruth,CON,Con,Conservative,#005af0,Camborne and Redruth,-45,43
+Cambridge,LAB,Lab,Labour,#dd0018,Cambridge,-30,65
+Cannock Chase,CON,Con,Conservative,#005af0,Cannock Chase,-29,54
+Canterbury,CON,Con,Conservative,#005af0,Canterbury,-41,71
+Cardiff Central,LAB,Lab,Labour,#dd0018,Cardiff Central,-37,48
+Cardiff North,LAB,Lab,Labour,#dd0018,Cardiff North,-36,48
+Cardiff South and Penarth,LAB,Lab,Labour,#dd0018,Cardiff South and Penarth,-38,48
+Cardiff West,LAB,Lab,Labour,#dd0018,Cardiff West,-37,47
+Carlisle,LAB,Lab,Labour,#dd0018,Carlisle,-14,53
+Carshalton and Wallington,LIB,LD,Liberal Democrats,#ffa331,Carshalton and Wallington,-43,62
+Castle Point,CON,Con,Conservative,#005af0,Castle Point,-36,69
+Central Devon,CON,Con,Conservative,#005af0,Central Devon,-42,47
+Central Suffolk and North Ipswich,CON,Con,Conservative,#005af0,Central Suffolk and North Ipswich,-29,68
+Ceredigion Preseli,PLC,PC,Plaid Cymru,#00d4a7,Ceredigion Preseli,-34,48
+Chatham and Aylesford,CON,Con,Conservative,#005af0,Chatham and Aylesford,-40,69
+Cheadle,CON,Con,Conservative,#005af0,Cheadle,-26,55
+Chelmsford,CON,Con,Conservative,#005af0,Chelmsford,-33,67
+Chelsea and Fulham,CON,Con,Conservative,#005af0,Chelsea and Fulham,-40,61
+Cheltenham,CON,Con,Conservative,#005af0,Cheltenham,-36,52
+Chesham and Amersham,CON,Con,Conservative,#005af0,Chesham and Amersham,-36,59
+Chester North and Neston,LAB,Lab,Labour,#dd0018,Chester North and Neston,-28,50
+Chester South and Eddisbury,CON,Con,Conservative,#005af0,Chester South and Eddisbury,-27,51
+Chesterfield,LAB,Lab,Labour,#dd0018,Chesterfield,-26,59
+Chichester,CON,Con,Conservative,#005af0,Chichester,-44,60
+Chingford and Woodford Green,CON,Con,Conservative,#005af0,Chingford and Woodford Green,-35,64
+Chippenham,CON,Con,Conservative,#005af0,Chippenham,-39,52
+Chipping Barnet,CON,Con,Conservative,#005af0,Chipping Barnet,-36,62
+Chorley,LAB,Lab,Labour,#dd0018,Chorley,-20,53
+Christchurch,CON,Con,Conservative,#005af0,Christchurch,-42,53
+Cities of London and Westminster,CON,Con,Conservative,#005af0,Cities of London and Westminster,-40,63
+City of Durham,LAB,Lab,Labour,#dd0018,City of Durham,-16,55
+Clacton,CON,Con,Conservative,#005af0,Clacton,-32,69
+Clwyd East,LAB,Lab,Labour,#dd0018,Clwyd East,-30,49
+Clwyd North,CON,Con,Conservative,#005af0,Clwyd North,-30,48
+Colchester,CON,Con,Conservative,#005af0,Colchester,-32,68
+Colne Valley,LAB,Lab,Labour,#dd0018,Colne Valley,-23,55
+Congleton,CON,Con,Conservative,#005af0,Congleton,-27,54
+Conwy,LAB,Lab,Labour,#dd0018,Conwy,-31,47
+Corby and East Northamptonshire,CON,Con,Conservative,#005af0,Corby and East Northamptonshire,-30,62
+Coventry East,LAB,Lab,Labour,#dd0018,Coventry East,-33,57
+Coventry North West,LAB,Lab,Labour,#dd0018,Coventry North West,-33,56
+Coventry South,LAB,Lab,Labour,#dd0018,Coventry South,-34,57
+Cramlington and Killingworth,LAB,Lab,Labour,#dd0018,Cramlington and Killingworth,-12,56
+Crawley,CON,Con,Conservative,#005af0,Crawley,-44,69
+Crewe and Nantwich,LAB,Lab,Labour,#dd0018,Crewe and Nantwich,-27,53
+Croydon East,LAB,Lab,Labour,#dd0018,Croydon East,-42,65
+Croydon South,CON,Con,Conservative,#005af0,Croydon South,-43,64
+Croydon West,LAB,Lab,Labour,#dd0018,Croydon West,-43,63
+Dagenham and Rainham,LAB,Lab,Labour,#dd0018,Dagenham and Rainham,-37,67
+Darlington,LAB,Lab,Labour,#dd0018,Darlington,-17,55
+Dartford,CON,Con,Conservative,#005af0,Dartford,-40,68
+Daventry,CON,Con,Conservative,#005af0,Daventry,-32,60
+Derby North,LAB,Lab,Labour,#dd0018,Derby North,-28,58
+Derby South,LAB,Lab,Labour,#dd0018,Derby South,-28,57
+Derbyshire Dales,CON,Con,Conservative,#005af0,Derbyshire Dales,-26,57
+Dewsbury and Batley,LAB,Lab,Labour,#dd0018,Dewsbury and Batley,-22,57
+Didcot and Wantage,CON,Con,Conservative,#005af0,Didcot and Wantage,-38,54
+Doncaster Central,LAB,Lab,Labour,#dd0018,Doncaster Central,-23,60
+Doncaster East and the Isle of Axholme,LAB,Lab,Labour,#dd0018,Doncaster East and the Isle of Axholme,-23,61
+Doncaster North,LAB,Lab,Labour,#dd0018,Doncaster North,-22,61
+Dorking and Horley,CON,Con,Conservative,#005af0,Dorking and Horley,-43,59
+Droitwich and Evesham,CON,Con,Conservative,#005af0,Droitwich and Evesham,-36,54
+Dover and Deal,CON,Con,Conservative,#005af0,Dover and Deal,-41,72
+Dudley,LAB,Lab,Labour,#dd0018,Dudley,-31,51
+Dulwich and West Norwood,LAB,Lab,Labour,#dd0018,Dulwich and West Norwood,-42,63
+Dunstable and Leighton Buzzard,CON,Con,Conservative,#005af0,Dunstable and Leighton Buzzard,-33,62
+Dwyfor Meirionnydd,PLC,PC,Plaid Cymru,#00d4a7,Dwyfor Meirionnydd,-31,48
+Ealing Central and Acton,LAB,Lab,Labour,#dd0018,Ealing Central and Acton,-39,59
+Ealing North,LAB,Lab,Labour,#dd0018,Ealing North,-38,59
+Ealing Southall,LAB,Lab,Labour,#dd0018,Ealing Southall,-39,58
+Earley and Woodley,LAB,Lab,Labour,#dd0018,Earley and Woodley,-36,56
+Easington,LAB,Lab,Labour,#dd0018,Easington,-16,57
+East Antrim,OTH,Others,Others,#909090,East Antrim,-15,45
+East Grinstead and Uckfield,CON,Con,Conservative,#005af0,East Grinstead and Uckfield,-43,69
+East Ham,LAB,Lab,Labour,#dd0018,East Ham,-38,67
+East Hampshire,CON,Con,Conservative,#005af0,East Hampshire,-41,55
+East Londonderry,OTH,Others,Others,#909090,East Londonderry,-15,43
+East Surrey,CON,Con,Conservative,#005af0,East Surrey,-43,67
+East Thanet,CON,Con,Conservative,#005af0,East Thanet,-39,71
+East Wiltshire,CON,Con,Conservative,#005af0,East Wiltshire,-41,53
+East Worthing and Shoreham,CON,Con,Conservative,#005af0,East Worthing and Shoreham,-44,65
+Eastbourne,CON,Con,Conservative,#005af0,Eastbourne,-45,69
+Eastleigh,CON,Con,Conservative,#005af0,Eastleigh,-41,54
+Edmonton and Winchmore Hill,LAB,Lab,Labour,#dd0018,Edmonton and Winchmore Hill,-36,64
+Ellesmere Port and Bromborough,LAB,Lab,Labour,#dd0018,Ellesmere Port and Bromborough,-27,50
+Eltham and Chislehurst,LAB,Lab,Labour,#dd0018,Eltham and Chislehurst,-41,66
+Ely and East Cambridgeshire,CON,Con,Conservative,#005af0,Ely and East Cambridgeshire,-30,66
+Enfield North,LAB,Lab,Labour,#dd0018,Enfield North,-35,62
+Epping Forest,CON,Con,Conservative,#005af0,Epping Forest,-35,67
+Epsom and Ewell,CON,Con,Conservative,#005af0,Epsom and Ewell,-43,60
+Erewash,CON,Con,Conservative,#005af0,Erewash,-28,59
+Erith and Thamesmead,LAB,Lab,Labour,#dd0018,Erith and Thamesmead,-40,67
+Esher and Walton,CON,Con,Conservative,#005af0,Esher and Walton,-42,58
+Exeter,LAB,Lab,Labour,#dd0018,Exeter,-42,48
+Exmouth and Exeter East,CON,Con,Conservative,#005af0,Exmouth and Exeter East,-43,48
+Fareham and Waterlooville,CON,Con,Conservative,#005af0,Fareham and Waterlooville,-43,55
+Farnham and Bordon,CON,Con,Conservative,#005af0,Farnham and Bordon,-42,56
+Faversham and Kent Mid,CON,Con,Conservative,#005af0,Faversham and Kent Mid,-40,71
+Feltham and Heston,LAB,Lab,Labour,#dd0018,Feltham and Heston,-40,59
+Fermanagh and South Tyrone,OTH,Others,Others,#909090,Fermanagh and South Tyrone,-17,42
+Filton and Bradley Stoke,CON,Con,Conservative,#005af0,Filton and Bradley Stoke,-37,50
+Finchley and Golders Green,CON,Con,Conservative,#005af0,Finchley and Golders Green,-37,61
+Folkestone and Hythe,CON,Con,Conservative,#005af0,Folkestone and Hythe,-42,71
+Forest of Dean,CON,Con,Conservative,#005af0,Forest of Dean,-35,50
+Foyle,OTH,Others,Others,#909090,Foyle,-15,42
+Frome and East Somerset,CON,Con,Conservative,#005af0,Frome and East Somerset,-41,50
+Fylde,CON,Con,Conservative,#005af0,Fylde,-19,51
+Gainsborough,CON,Con,Conservative,#005af0,Gainsborough,-25,61
+Gateshead Central and Whickham,LAB,Lab,Labour,#dd0018,Gateshead Central and Whickham,-15,56
+Gedling,LAB,Lab,Labour,#dd0018,Gedling,-28,61
+Gillingham and Rainham,CON,Con,Conservative,#005af0,Gillingham and Rainham,-40,70
+Glastonbury and Somerton,CON,Con,Conservative,#005af0,Glastonbury and Somerton,-41,49
+Gloucester,CON,Con,Conservative,#005af0,Gloucester,-35,51
+Goole and Pocklington,CON,Con,Conservative,#005af0,Goole and Pocklington,-21,61
+Goole and Pocklington,CON,Con,Conservative,#005af0,Goole and Pocklington,-21,61
+Gorton and Denton,LAB,Lab,Labour,#dd0018,Gorton and Denton,-24,55
+Gosport,CON,Con,Conservative,#005af0,Gosport,-43,57
+Gower,LAB,Lab,Labour,#dd0018,Gower,-37,44
+Grantham and Bourne,CON,Con,Conservative,#005af0,Grantham and Bourne,-28,63
+Gravesham,CON,Con,Conservative,#005af0,Gravesham,-39,68
+Great Grimsby and Cleethorpes,LAB,Lab,Labour,#dd0018,Great Grimsby and Cleethorpes,-24,63
+Great Yarmouth,CON,Con,Conservative,#005af0,Great Yarmouth,-27,67
+Greenwich and Woolwich,LAB,Lab,Labour,#dd0018,Greenwich and Woolwich,-40,66
+Guildford,CON,Con,Conservative,#005af0,Guildford,-41,56
+Hackney North and Stoke Newington,LAB,Lab,Labour,#dd0018,Hackney North and Stoke Newington,-38,64
+Hackney South and Shoreditch,LAB,Lab,Labour,#dd0018,Hackney South and Shoreditch,-39,64
+Halesowen,CON,Con,Conservative,#005af0,Halesowen,-33,51
+Halifax,LAB,Lab,Labour,#dd0018,Halifax,-21,55
+Hamble Valley,CON,Con,Conservative,#005af0,Hamble Valley,-43,56
+Hammersmith and Chiswick,LAB,Lab,Labour,#dd0018,Hammersmith and Chiswick,-39,60
+Hampstead and Highgate,LAB,Lab,Labour,#dd0018,Hampstead and Highgate,-38,62
+"Harborough, Oadby and Wigston",CON,Con,Conservative,#005af0,"Harborough, Oadby and Wigston",-31,61
+Harlow,CON,Con,Conservative,#005af0,Harlow,-32,67
+Harpenden and Berkhamsted,LIB,LD,Liberal Democrats,#ffa331,Harpenden and Berkhamsted,-34,62
+Harrogate and Knaresborough,CON,Con,Conservative,#005af0,Harrogate and Knaresborough,-18,59
+Harrow East,CON,Con,Conservative,#005af0,Harrow East,-37,60
+Harrow West,LAB,Lab,Labour,#dd0018,Harrow West,-37,59
+Hartlepool,LAB,Lab,Labour,#dd0018,Hartlepool,-16,59
+Harwich and North Essex,CON,Con,Conservative,#005af0,Harwich and North Essex,-31,69
+Hastings and Rye,LAB,Lab,Labour,#dd0018,Hastings and Rye,-43,70
+Havant,CON,Con,Conservative,#005af0,Havant,-44,59
+Hayes and Harlington,LAB,Lab,Labour,#dd0018,Hayes and Harlington,-38,58
+Hazel Grove,CON,Con,Conservative,#005af0,Hazel Grove,-25,55
+Hemel Hempstead,CON,Con,Conservative,#005af0,Hemel Hempstead,-34,64
+Hendon,LAB,Lab,Labour,#dd0018,Hendon,-36,61
+Henley and Thame,CON,Con,Conservative,#005af0,Henley and Thame,-35,58
+Hereford and South Herefordshire,CON,Con,Conservative,#005af0,Hereford and South Herefordshire,-34,51
+Herne Bay and Sandwich,LAB,Lab,Labour,#dd0018,Herne Bay and Sandwich,-40,72
+Hertford and Stortford,CON,Con,Conservative,#005af0,Hertford and Stortford,-32,66
+Hertsmere,CON,Con,Conservative,#005af0,Hertsmere,-34,66
+Hexham,CON,Con,Conservative,#005af0,Hexham,-13,53
+Heywood and Middleton North,LAB,Lab,Labour,#dd0018,Heywood and Middleton North,-20,54
+High Peak,LAB,Lab,Labour,#dd0018,High Peak,-25,56
+Hinckley and Bosworth,CON,Con,Conservative,#005af0,Hinckley and Bosworth,-30,58
+Hitchin,CON,Con,Conservative,#005af0,Hitchin,-32,64
+Holborn and St Pancras,LAB,Lab,Labour,#dd0018,Holborn and St Pancras,-39,62
+Honiton and Sidmouth,CON,Con,Conservative,#005af0,Honiton and Sidmouth,-43,49
+Hornchurch and Upminster,CON,Con,Conservative,#005af0,Hornchurch and Upminster,-37,66
+Hornsey and Friern Barnet,LAB,Lab,Labour,#dd0018,Hornsey and Friern Barnet,-36,63
+Horsham,CON,Con,Conservative,#005af0,Horsham,-44,62
+Houghton and Sunderland South,LAB,Lab,Labour,#dd0018,Houghton and Sunderland South,-15,57
+Hove and Portslade,LAB,Lab,Labour,#dd0018,Hove and Portslade,-44,66
+Huddersfield,LAB,Lab,Labour,#dd0018,Huddersfield,-22,56
+Huntingdon,CON,Con,Conservative,#005af0,Huntingdon,-31,63
+Hyndburn,LAB,Lab,Labour,#dd0018,Hyndburn,-19,54
+Ilford North,LAB,Lab,Labour,#dd0018,Ilford North,-36,65
+Ilford South,LAB,Lab,Labour,#dd0018,Ilford South,-37,65
+Ipswich,LAB,Lab,Labour,#dd0018,Ipswich,-30,68
+Isle of Wight East,CON,Con,Conservative,#005af0,Isle of Wight East,-45,54
+Isle of Wight West,CON,Con,Conservative,#005af0,Isle of Wight West,-45,53
+Islington North,LAB,Lab,Labour,#dd0018,Islington North,-38,63
+Islington South and Finsbury,LAB,Lab,Labour,#dd0018,Islington South and Finsbury,-39,63
+Jarrow and Gateshead East,LAB,Lab,Labour,#dd0018,Jarrow and Gateshead East,-14,57
+Keighley and Ilkley,LAB,Lab,Labour,#dd0018,Keighley and Ilkley,-19,56
+Kenilworth and Southam,CON,Con,Conservative,#005af0,Kenilworth and Southam,-34,56
+Kensington and Bayswater,CON,Con,Conservative,#005af0,Kensington and Bayswater,-39,61
+Kettering,CON,Con,Conservative,#005af0,Kettering,-30,61
+Kingston and Surbiton,LIB,LD,Liberal Democrats,#ffa331,Kingston and Surbiton,-42,59
+Kingston upon Hull East,LAB,Lab,Labour,#dd0018,Kingston upon Hull East,-22,63
+Kingston upon Hull North and Cottingham,LAB,Lab,Labour,#dd0018,Kingston upon Hull North and Cottingham,-21,62
+Kingston upon Hull West and Haltemprice,LAB,Lab,Labour,#dd0018,Kingston upon Hull West and Haltemprice,-22,62
+Kingswinford and South Staffordshire,CON,Con,Conservative,#005af0,Kingswinford and South Staffordshire,-30,52
+Knowsley,LAB,Lab,Labour,#dd0018,Knowsley,-23,50
+Lagan Valley,OTH,Others,Others,#909090,Lagan Valley,-18,44
+Lancaster and Wyre,LAB,Lab,Labour,#dd0018,Lancaster and Wyre,-18,54
+Leeds East,LAB,Lab,Labour,#dd0018,Leeds East,-20,61
+Leeds North East,LAB,Lab,Labour,#dd0018,Leeds North East,-19,59
+Leeds North West,LAB,Lab,Labour,#dd0018,Leeds North West,-19,58
+Leeds South,LAB,Lab,Labour,#dd0018,Leeds South,-21,59
+Leeds South West and Morley,LAB,Lab,Labour,#dd0018,Leeds South West and Morley,-21,58
+Leeds West and Pudsey,LAB,Lab,Labour,#dd0018,Leeds West and Pudsey,-20,59
+Leeds West and Pudsey,LAB,Lab,Labour,#dd0018,Leeds West and Pudsey,-20,59
+Leicester East,LAB,Lab,Labour,#dd0018,Leicester East,-30,60
+Leicester South,LAB,Lab,Labour,#dd0018,Leicester South,-31,60
+Leicester West,LAB,Lab,Labour,#dd0018,Leicester West,-31,59
+Leigh and Atherton,LAB,Lab,Labour,#dd0018,Leigh and Atherton,-25,51
+Lewes,LIB,LD,Liberal Democrats,#ffa331,Lewes,-45,68
+Lewisham Deptford,LAB,Lab,Labour,#dd0018,Lewisham Deptford,-40,65
+Lewisham East,LAB,Lab,Labour,#dd0018,Lewisham East,-42,66
+Lewisham West and East Dulwich,LAB,Lab,Labour,#dd0018,Lewisham West and East Dulwich,-41,65
+Leyton and Wanstead,LAB,Lab,Labour,#dd0018,Leyton and Wanstead,-37,64
+Lichfield,CON,Con,Conservative,#005af0,Lichfield,-29,56
+Lincoln,LAB,Lab,Labour,#dd0018,Lincoln,-25,62
+Liverpool Garston,LAB,Lab,Labour,#dd0018,Liverpool Garston,-25,50
+Liverpool Riverside,LAB,Lab,Labour,#dd0018,Liverpool Riverside,-24,49
+Liverpool Walton,LAB,Lab,Labour,#dd0018,Liverpool Walton,-23,49
+Liverpool Wavertree,LAB,Lab,Labour,#dd0018,Liverpool Wavertree,-25,49
+Liverpool West Derby,LAB,Lab,Labour,#dd0018,Liverpool West Derby,-24,50
+Llanelli,LAB,Lab,Labour,#dd0018,Llanelli,-36,45
+Loughborough,CON,Con,Conservative,#005af0,Loughborough,-30,59
+Louth and Horncastle,CON,Con,Conservative,#005af0,Louth and Horncastle,-25,63
+Lowestoft,CON,Con,Conservative,#005af0,Lowestoft,-28,68
+Luton North,LAB,Lab,Labour,#dd0018,Luton North,-33,63
+Luton South and South Bedfordshire,LAB,Lab,Labour,#dd0018,Luton South and South Bedfordshire,-34,63
+Macclesfield,CON,Con,Conservative,#005af0,Macclesfield,-26,56
+Maidenhead,CON,Con,Conservative,#005af0,Maidenhead,-36,57
+Maidstone and Malling,CON,Con,Conservative,#005af0,Maidstone and Malling,-41,69
+Makerfield,LAB,Lab,Labour,#dd0018,Makerfield,-22,51
+Maldon,CON,Con,Conservative,#005af0,Maldon,-33,69
+Manchester Central,LAB,Lab,Labour,#dd0018,Manchester Central,-24,54
+Manchester Rusholme,LAB,Lab,Labour,#dd0018,Manchester Rusholme,-25,53
+Manchester Withington,LAB,Lab,Labour,#dd0018,Manchester Withington,-26,54
+Mansfield,LAB,Lab,Labour,#dd0018,Mansfield,-27,61
+Melksham and Devizes,CON,Con,Conservative,#005af0,Melksham and Devizes,-40,52
+Melton and Syston,CON,Con,Conservative,#005af0,Melton and Syston,-29,61
+Meriden and Solihull East,CON,Con,Conservative,#005af0,Meriden and Solihull East,-33,55
+Merthyr Tydfil and Aberdare,LAB,Lab,Labour,#dd0018,Merthyr Tydfil and Aberdare,-34,49
+Mid and South Pembrokeshire,CON,Con,Conservative,#005af0,Mid and South Pembrokeshire,-36,44
+Mid Bedfordshire,CON,Con,Conservative,#005af0,Mid Bedfordshire,-32,62
+Mid Buckinghamshire,CON,Con,Conservative,#005af0,Mid Buckinghamshire,-35,59
+Mid Cheshire,CON,Con,Conservative,#005af0,Mid Cheshire,-27,52
+Mid Derbyshire,CON,Con,Conservative,#005af0,Mid Derbyshire,-27,57
+Mid Dorset and North Poole,CON,Con,Conservative,#005af0,Mid Dorset and North Poole,-43,50
+Mid Leicestershire,CON,Con,Conservative,#005af0,Mid Leicestershire,-31,58
+Mid Norfolk,CON,Con,Conservative,#005af0,Mid Norfolk,-28,65
+Mid Sussex,CON,Con,Conservative,#005af0,Mid Sussex,-43,68
+Mid Ulster,OTH,Others,Others,#909090,Mid Ulster,-16,43
+Middlesbrough and Thornaby East,LAB,Lab,Labour,#dd0018,Middlesbrough and Thornaby East,-17,57
+Middlesbrough South and East Cleveland,LAB,Lab,Labour,#dd0018,Middlesbrough South and East Cleveland,-17,59
+Midlothian,SNP,SNP,SNP,#fff293,Midlothian,-11,52
+Milton Keynes Central,CON,Con,Conservative,#005af0,Milton Keynes Central,-34,61
+Milton Keynes North,CON,Con,Conservative,#005af0,Milton Keynes North,-33,61
+Mitcham and Morden,LAB,Lab,Labour,#dd0018,Mitcham and Morden,-43,61
+Monmouthshire,CON,Con,Conservative,#005af0,Monmouthshire,-36,50
+Montgomeryshire and Glyndwr,LAB,Lab,Labour,#dd0018,Montgomeryshire and Glyndwr,-31,49
+Morecambe and Lunesdale,LAB,Lab,Labour,#dd0018,Morecambe and Lunesdale,-17,54
+Neath and Swansea East,LAB,Lab,Labour,#dd0018,Neath and Swansea East,-35,47
+New Forest East,CON,Con,Conservative,#005af0,New Forest East,-43,54
+New Forest West,CON,Con,Conservative,#005af0,New Forest West,-43,53
+Newark,CON,Con,Conservative,#005af0,Newark,-26,62
+Newbury,CON,Con,Conservative,#005af0,Newbury,-37,54
+Newcastle upon Tyne Central and West,LAB,Lab,Labour,#dd0018,Newcastle upon Tyne Central and West,-13,54
+Newcastle upon Tyne East and Wallsend,LAB,Lab,Labour,#dd0018,Newcastle upon Tyne East and Wallsend,-14,56
+Newcastle upon Tyne North,LAB,Lab,Labour,#dd0018,Newcastle upon Tyne North,-13,55
+Newcastle-under-Lyme,LAB,Lab,Labour,#dd0018,Newcastle-under-Lyme,-28,52
+Newport East,LAB,Lab,Labour,#dd0018,Newport East,-37,49
+Newport West and Islwyn,LAB,Lab,Labour,#dd0018,Newport West and Islwyn,-36,49
+Newry and Armagh,OTH,Others,Others,#909090,Newry and Armagh,-19,44
+Newton Abbot,CON,Con,Conservative,#005af0,Newton Abbot,-43,47
+Newton Aycliffe and Spennymoor,LAB,Lab,Labour,#dd0018,Newton Aycliffe and Spennymoor,-16,56
+Normanton and Hemsworth,LAB,Lab,Labour,#dd0018,Normanton and Hemsworth,-23,59
+North Antrim,OTH,Others,Others,#909090,North Antrim,-15,44
+North Bedfordshire,CON,Con,Conservative,#005af0,North Bedfordshire,-31,62
+North Cornwall,CON,Con,Conservative,#005af0,North Cornwall,-43,45
+North Cotswolds,CON,Con,Conservative,#005af0,North Cotswolds,-37,53
+North Devon,CON,Con,Conservative,#005af0,North Devon,-41,46
+North Dorset,OTH,Others,Others,#909090,North Dorset,-42,51
+North Down,OTH,Others,Others,#909090,North Down,-16,46
+North Durham,LAB,Lab,Labour,#dd0018,North Durham,-15,54
+North East Cambridgeshire,CON,Con,Conservative,#005af0,North East Cambridgeshire,-29,64
+North East Derbyshire,LAB,Lab,Labour,#dd0018,North East Derbyshire,-26,58
+North East Hampshire,CON,Con,Conservative,#005af0,North East Hampshire,-38,56
+North East Hertfordshire,CON,Con,Conservative,#005af0,North East Hertfordshire,-32,65
+North East Somerset and Hanham,CON,Con,Conservative,#005af0,North East Somerset and Hanham,-39,50
+North Herefordshire,CON,Con,Conservative,#005af0,North Herefordshire,-34,52
+North Norfolk,LIB,LD,Liberal Democrats,#ffa331,North Norfolk,-27,65
+North Northumberland,CON,Con,Conservative,#005af0,North Northumberland,-12,54
+North Shropshire,CON,Con,Conservative,#005af0,North Shropshire,-29,50
+North Somerset,CON,Con,Conservative,#005af0,North Somerset,-39,49
+North Warwickshire and Bedworth,CON,Con,Conservative,#005af0,North Warwickshire and Bedworth,-32,57
+North West Cambridgeshire,CON,Con,Conservative,#005af0,North West Cambridgeshire,-30,64
+North West Essex,CON,Con,Conservative,#005af0,North West Essex,-31,66
+North West Hampshire,CON,Con,Conservative,#005af0,North West Hampshire,-39,54
+North West Leicestershire,CON,Con,Conservative,#005af0,North West Leicestershire,-29,58
+North West Norfolk,CON,Con,Conservative,#005af0,North West Norfolk,-28,64
+Northampton North,LAB,Lab,Labour,#dd0018,Northampton North,-32,61
+Northampton South,CON,Con,Conservative,#005af0,Northampton South,-33,60
+Norwich North,LAB,Lab,Labour,#dd0018,Norwich North,-28,66
+Norwich South,LAB,Lab,Labour,#dd0018,Norwich South,-29,66
+Nottingham East,LAB,Lab,Labour,#dd0018,Nottingham East,-29,60
+Nottingham North and Kimberley,LAB,Lab,Labour,#dd0018,Nottingham North and Kimberley,-28,60
+Nottingham South,LAB,Lab,Labour,#dd0018,Nottingham South,-29,59
+Nuneaton,CON,Con,Conservative,#005af0,Nuneaton,-31,57
+Old Bexley and Sidcup,CON,Con,Conservative,#005af0,Old Bexley and Sidcup,-41,67
+Oldham East and Saddleworth,LAB,Lab,Labour,#dd0018,Oldham East and Saddleworth,-22,55
+"Oldham West, Chadderton and Royton",LAB,Lab,Labour,#dd0018,"Oldham West, Chadderton and Royton",-22,54
+Orpington,CON,Con,Conservative,#005af0,Orpington,-43,66
+Ossett and Denby Dale,LAB,Lab,Labour,#dd0018,Ossett and Denby Dale,-22,58
+Oxford East,LAB,Lab,Labour,#dd0018,Oxford East,-34,58
+Oxford West and Abingdon,LIB,LD,Liberal Democrats,#ffa331,Oxford West and Abingdon,-35,57
+Peckham,LAB,Lab,Labour,#dd0018,Peckham,-41,64
+Pendle and Clitheroe,LAB,Lab,Labour,#dd0018,Pendle and Clitheroe,-18,56
+Penistone and Stocksbridge,LAB,Lab,Labour,#dd0018,Penistone and Stocksbridge,-23,56
+Penrith and Solway,CON,Con,Conservative,#005af0,Penrith and Solway,-15,52
+Peterborough,CON,Con,Conservative,#005af0,Peterborough,-29,63
+Plymouth Moor View,CON,Con,Conservative,#005af0,Plymouth Moor View,-43,46
+Plymouth Sutton and Devonport,LAB,Lab,Labour,#dd0018,Plymouth Sutton and Devonport,-44,47
+"Pontefract, Castleford and Knottingley",LAB,Lab,Labour,#dd0018,"Pontefract, Castleford and Knottingley",-22,60
+Pontypridd,LAB,Lab,Labour,#dd0018,Pontypridd,-35,48
+Poole,CON,Con,Conservative,#005af0,Poole,-43,51
+Poplar and Canning Town,LAB,Lab,Labour,#dd0018,Poplar and Canning Town,-39,66
+Portsmouth North,CON,Con,Conservative,#005af0,Portsmouth North,-43,58
+Portsmouth South,CON,Con,Conservative,#005af0,Portsmouth South,-44,58
+Preston,LAB,Lab,Labour,#dd0018,Preston,-19,52
+Putney,CON,Con,Conservative,#005af0,Putney,-41,61
+Queen's Park and Maida Vale,LAB,Lab,Labour,#dd0018,Queen's Park and Maida Vale,-40,62
+Rawmarsh and Conisbrough,LAB,Lab,Labour,#dd0018,Rawmarsh and Conisbrough,-24,60
+Rayleigh and Wickford,CON,Con,Conservative,#005af0,Rayleigh and Wickford,-34,68
+Reading Central,LAB,Lab,Labour,#dd0018,Reading Central,-37,55
+Reading West and Mid Berkshire,CON,Con,Conservative,#005af0,Reading West and Mid Berkshire,-36,55
+Redcar,LAB,Lab,Labour,#dd0018,Redcar,-17,58
+Redditch,CON,Con,Conservative,#005af0,Redditch,-35,53
+Reigate,CON,Con,Conservative,#005af0,Reigate,-44,68
+Rhondda and Ogmore,LAB,Lab,Labour,#dd0018,Rhondda and Ogmore,-36,47
+Ribble Valley,CON,Con,Conservative,#005af0,Ribble Valley,-18,55
+Richmond and Northallerton,CON,Con,Conservative,#005af0,Richmond and Northallerton,-18,57
+Richmond Park,CON,Con,Conservative,#005af0,Richmond Park,-41,59
+Rochdale,LAB,Lab,Labour,#dd0018,Rochdale,-21,54
+Rochester and Strood,CON,Con,Conservative,#005af0,Rochester and Strood,-39,69
+Romford,CON,Con,Conservative,#005af0,Romford,-36,66
+Romsey and Southampton North,CON,Con,Conservative,#005af0,Romsey and Southampton North,-40,54
+Rossendale and Darwen,CON,Con,Conservative,#005af0,Rossendale and Darwen,-20,55
+Rother Valley,LAB,Lab,Labour,#dd0018,Rother Valley,-25,60
+Rotherham,LAB,Lab,Labour,#dd0018,Rotherham,-24,59
+Rugby,CON,Con,Conservative,#005af0,Rugby,-32,58
+"Ruislip, Northwood and Pinner",CON,Con,Conservative,#005af0,"Ruislip, Northwood and Pinner",-36,60
+Runcorn and Helsby,LAB,Lab,Labour,#dd0018,Runcorn and Helsby,-28,51
+Runnymede and Weybridge,CON,Con,Conservative,#005af0,Runnymede and Weybridge,-41,57
+Rushcliffe,CON,Con,Conservative,#005af0,Rushcliffe,-28,62
+Rutland and Stamford,CON,Con,Conservative,#005af0,Rutland and Stamford,-29,62
+Salford,LAB,Lab,Labour,#dd0018,Salford,-24,53
+Salisbury,CON,Con,Conservative,#005af0,Salisbury,-41,52
+Scarborough and Whitby,CON,Con,Conservative,#005af0,Scarborough and Whitby,-19,61
+Scunthorpe,LAB,Lab,Labour,#dd0018,Scunthorpe,-24,61
+Sefton Central,LAB,Lab,Labour,#dd0018,Sefton Central,-20,50
+Selby,CON,Con,Conservative,#005af0,Selby,-21,60
+Sevenoaks,CON,Con,Conservative,#005af0,Sevenoaks,-42,68
+Sheffield Brightside and Hillsborough,LAB,Lab,Labour,#dd0018,Sheffield Brightside and Hillsborough,-24,58
+Sheffield Central,LAB,Lab,Labour,#dd0018,Sheffield Central,-25,58
+Sheffield Hallam,LIB,LD,Liberal Democrats,#ffa331,Sheffield Hallam,-24,57
+Sheffield Heeley,LAB,Lab,Labour,#dd0018,Sheffield Heeley,-25,57
+Sheffield South East,LAB,Lab,Labour,#dd0018,Sheffield South East,-25,59
+Sherwood Forest,CON,Con,Conservative,#005af0,Sherwood Forest,-27,62
+Shipley,CON,Con,Conservative,#005af0,Shipley,-19,57
+Shrewsbury,CON,Con,Conservative,#005af0,Shrewsbury,-30,51
+Sittingbourne and Sheppey,CON,Con,Conservative,#005af0,Sittingbourne and Sheppey,-39,70
+Skipton and Ripon,CON,Con,Conservative,#005af0,Skipton and Ripon,-18,58
+Sleaford and North Hykeham,CON,Con,Conservative,#005af0,Sleaford and North Hykeham,-26,63
+Slough,LAB,Lab,Labour,#dd0018,Slough,-37,56
+Smethwick,LAB,Lab,Labour,#dd0018,Smethwick,-32,53
+Solihull West and Shirley,CON,Con,Conservative,#005af0,Solihull West and Shirley,-34,55
+South Antrim,OTH,Others,Others,#909090,South Antrim,-16,44
+South Basildon and East Thurrock,CON,Con,Conservative,#005af0,South Basildon and East Thurrock,-36,68
+South Cambridgeshire,CON,Con,Conservative,#005af0,South Cambridgeshire,-31,65
+South Cotswolds,CON,Con,Conservative,#005af0,South Cotswolds,-38,53
+South Derbyshire,CON,Con,Conservative,#005af0,South Derbyshire,-29,57
+South Devon,CON,Con,Conservative,#005af0,South Devon,-45,48
+South Dorset,CON,Con,Conservative,#005af0,South Dorset,-44,51
+South Down,CON,Con,Conservative,#005af0,South Down,-18,46
+South East Cornwall,CON,Con,Conservative,#005af0,South East Cornwall,-44,46
+South Holland and The Deepings,CON,Con,Conservative,#005af0,South Holland and The Deepings,-27,63
+South Leicestershire,CON,Con,Conservative,#005af0,South Leicestershire,-32,59
+South Norfolk,CON,Con,Conservative,#005af0,South Norfolk,-29,67
+South Northamptonshire,CON,Con,Conservative,#005af0,South Northamptonshire,-33,59
+South Ribble,CON,Con,Conservative,#005af0,South Ribble,-20,52
+South Shields,LAB,Lab,Labour,#dd0018,South Shields,-14,58
+South Shropshire,CON,Con,Conservative,#005af0,South Shropshire,-31,50
+South Suffolk,CON,Con,Conservative,#005af0,South Suffolk,-30,69
+South West Devon,CON,Con,Conservative,#005af0,South West Devon,-45,47
+South West Hertfordshire,CON,Con,Conservative,#005af0,South West Hertfordshire,-35,61
+South West Norfolk,CON,Con,Conservative,#005af0,South West Norfolk,-29,65
+South West Wiltshire,CON,Con,Conservative,#005af0,South West Wiltshire,-41,51
+Southampton Itchen,LAB,Lab,Labour,#dd0018,Southampton Itchen,-42,55
+Southampton Test,LAB,Lab,Labour,#dd0018,Southampton Test,-42,54
+Southend East and Rochford,CON,Con,Conservative,#005af0,Southend East and Rochford,-34,69
+Southend West and Leigh,CON,Con,Conservative,#005af0,Southend West and Leigh,-35,68
+Southgate and Wood Green,LAB,Lab,Labour,#dd0018,Southgate and Wood Green,-35,63
+Southport,CON,Con,Conservative,#005af0,Southport,-19,50
+Spelthorne,CON,Con,Conservative,#005af0,Spelthorne,-40,58
+Spen Valley,LAB,Lab,Labour,#dd0018,Spen Valley,-21,57
+St Albans,CON,Con,Conservative,#005af0,St Albans,-34,65
+St Austell and Newquay,CON,Con,Conservative,#005af0,St Austell and Newquay,-44,45
+St Helens North,LAB,Lab,Labour,#dd0018,St Helens North,-21,50
+St Helens South and Whiston,LAB,Lab,Labour,#dd0018,St Helens South and Whiston,-22,50
+St Ives,LIB,LD,Liberal Democrats,#ffa331,St Ives,-46,43
+St Neots and Mid Cambridgeshire,CON,Con,Conservative,#005af0,St Neots and Mid Cambridgeshire,-31,64
+Stafford,CON,Con,Conservative,#005af0,Stafford,-28,54
+Staffordshire Moorlands,CON,Con,Conservative,#005af0,Staffordshire Moorlands,-27,56
+Stalybridge and Hyde,LAB,Lab,Labour,#dd0018,Stalybridge and Hyde,-24,56
+Stevenage,CON,Con,Conservative,#005af0,Stevenage,-33,64
+Stockport,LAB,Lab,Labour,#dd0018,Stockport,-25,54
+Stockton North,LAB,Lab,Labour,#dd0018,Stockton North,-16,58
+Stockton West,LAB,Lab,Labour,#dd0018,Stockton West,-17,56
+Stoke-on-Trent Central,LAB,Lab,Labour,#dd0018,Stoke-on-Trent Central,-28,55
+Stoke-on-Trent North,LAB,Lab,Labour,#dd0018,Stoke-on-Trent North,-27,55
+Stoke-on-Trent South,CON,Con,Conservative,#005af0,Stoke-on-Trent South,-29,55
+"Stone, Great Wyrley and Penkridge",CON,Con,Conservative,#005af0,"Stone, Great Wyrley and Penkridge",-28,53
+Stourbridge,CON,Con,Conservative,#005af0,Stourbridge,-32,51
+Strangford,OTH,Others,Others,#909090,Strangford,-17,46
+Stratford-on-Avon,CON,Con,Conservative,#005af0,Stratford-on-Avon,-35,54
+Streatham and Croydon North,LAB,Lab,Labour,#dd0018,Streatham and Croydon North,-42,64
+Stretford and Urmston,LAB,Lab,Labour,#dd0018,Stretford and Urmston,-24,52
+Stroud,LAB,Lab,Labour,#dd0018,Stroud,-37,52
+Suffolk Coastal,CON,Con,Conservative,#005af0,Suffolk Coastal,-29,69
+Sunderland Central,LAB,Lab,Labour,#dd0018,Sunderland Central,-15,58
+Sunderland North,LAB,Lab,Labour,#dd0018,Sunderland North,-15,58
+Surrey Heath,CON,Con,Conservative,#005af0,Surrey Heath,-39,57
+Sussex Weald,CON,Con,Conservative,#005af0,Sussex Weald,-42,70
+Sutton and Cheam,CON,Con,Conservative,#005af0,Sutton and Cheam,-42,60
+Sutton Coldfield,CON,Con,Conservative,#005af0,Sutton Coldfield,-31,56
+Swansea West,LAB,Lab,Labour,#dd0018,Swansea West,-37,45
+Swindon North,CON,Con,Conservative,#005af0,Swindon North,-39,53
+Swindon South,CON,Con,Conservative,#005af0,Swindon South,-40,53
+Tamworth,CON,Con,Conservative,#005af0,Tamworth,-30,57
+Tatton,CON,Con,Conservative,#005af0,Tatton,-26,52
+Taunton and Wellington,CON,Con,Conservative,#005af0,Taunton and Wellington,-42,49
+Telford,LAB,Lab,Labour,#dd0018,Telford,-29,52
+Tewkesbury,CON,Con,Conservative,#005af0,Tewkesbury,-36,53
+The Wrekin,CON,Con,Conservative,#005af0,The Wrekin,-29,51
+Thirsk and Malton,CON,Con,Conservative,#005af0,Thirsk and Malton,-18,60
+Thornbury and Yate,CON,Con,Conservative,#005af0,Thornbury and Yate,-36,51
+Thurrock,LAB,Lab,Labour,#dd0018,Thurrock,-36,67
+Tipton and Wednesbury,LAB,Lab,Labour,#dd0018,Tipton and Wednesbury,-31,52
+Tiverton and Minehead,CON,Con,Conservative,#005af0,Tiverton and Minehead,-41,47
+Tonbridge,CON,Con,Conservative,#005af0,Tonbridge,-41,68
+Tooting,LAB,Lab,Labour,#dd0018,Tooting,-42,61
+Torbay,CON,Con,Conservative,#005af0,Torbay,-44,48
+Torfaen,LAB,Lab,Labour,#dd0018,Torfaen,-34,50
+Torridge and Tavistock,CON,Con,Conservative,#005af0,Torridge and Tavistock,-42,46
+Tottenham,LAB,Lab,Labour,#dd0018,Tottenham,-37,62
+Truro and Falmouth,CON,Con,Conservative,#005af0,Truro and Falmouth,-45,44
+Tunbridge Wells,CON,Con,Conservative,#005af0,Tunbridge Wells,-42,69
+Twickenham,LIB,LD,Liberal Democrats,#ffa331,Twickenham,-41,58
+Tynemouth,LAB,Lab,Labour,#dd0018,Tynemouth,-13,56
+Upper Bann,OTH,Others,Others,#909090,Upper Bann,-18,43
+Uxbridge and South Ruislip,CON,Con,Conservative,#005af0,Uxbridge and South Ruislip,-37,58
+Vale of Glamorgan,CON,Con,Conservative,#005af0,Vale of Glamorgan,-38,47
+Vauxhall and Camberwell Green,LAB,Lab,Labour,#dd0018,Vauxhall and Camberwell Green,-41,63
+Wakefield and Rothwell,LAB,Lab,Labour,#dd0018,Wakefield and Rothwell,-22,59
+Wallasey,LAB,Lab,Labour,#dd0018,Wallasey,-27,48
+Walsall and Bloxwich,LAB,Lab,Labour,#dd0018,Walsall and Bloxwich,-30,55
+Walthamstow,LAB,Lab,Labour,#dd0018,Walthamstow,-37,63
+Warrington North,LAB,Lab,Labour,#dd0018,Warrington North,-23,51
+Warrington South,LAB,Lab,Labour,#dd0018,Warrington South,-24,51
+Warwick and Leamington,LAB,Lab,Labour,#dd0018,Warwick and Leamington,-35,55
+Washington and Gateshead South,LAB,Lab,Labour,#dd0018,Washington and Gateshead South,-15,55
+Watford,CON,Con,Conservative,#005af0,Watford,-35,65
+Waveney Valley,CON,Con,Conservative,#005af0,Waveney Valley,-28,67
+Weald of Kent,CON,Con,Conservative,#005af0,Weald of Kent,-41,70
+Wellingborough and Rushden,CON,Con,Conservative,#005af0,Wellingborough and Rushden,-30,63
+Wells and Mendip Hills,CON,Con,Conservative,#005af0,Wells and Mendip Hills,-40,50
+Welwyn Hatfield,CON,Con,Conservative,#005af0,Welwyn Hatfield,-33,65
+West Bromwich,LAB,Lab,Labour,#dd0018,West Bromwich,-32,52
+West Dorset,CON,Con,Conservative,#005af0,West Dorset,-44,50
+West Ham and Beckton,LAB,Lab,Labour,#dd0018,West Ham and Beckton,-38,66
+West Lancashire,LAB,Lab,Labour,#dd0018,West Lancashire,-21,49
+West Suffolk,CON,Con,Conservative,#005af0,West Suffolk,-30,67
+West Tyrone,OTH,Others,Others,#909090,West Tyrone,-16,42
+West Worcestershire,CON,Con,Conservative,#005af0,West Worcestershire,-35,52
+Westmorland and Lonsdale,LIB,LD,Liberal Democrats,#ffa331,Westmorland and Lonsdale,-15,53
+Weston-super-Mare,CON,Con,Conservative,#005af0,Weston-super-Mare,-40,49
+Wetherby and Easingwold,CON,Con,Conservative,#005af0,Wetherby and Easingwold,-20,62
+Whitehaven and Workington,LAB,Lab,Labour,#dd0018,Whitehaven and Workington,-16,53
+Widnes and Halewood,LAB,Lab,Labour,#dd0018,Widnes and Halewood,-26,51
+Wigan,LAB,Lab,Labour,#dd0018,Wigan,-20,51
+Wimbledon,CON,Con,Conservative,#005af0,Wimbledon,-41,60
+Winchester,CON,Con,Conservative,#005af0,Winchester,-40,55
+Windsor,CON,Con,Conservative,#005af0,Windsor,-38,57
+Wirral West,LAB,Lab,Labour,#dd0018,Wirral West,-28,49
+Witham,CON,Con,Conservative,#005af0,Witham,-33,68
+Witney,CON,Con,Conservative,#005af0,Witney,-35,56
+Woking,CON,Con,Conservative,#005af0,Woking,-40,57
+Wokingham,CON,Con,Conservative,#005af0,Wokingham,-38,55
+Wolverhampton North East,LAB,Lab,Labour,#dd0018,Wolverhampton North East,-29,53
+Wolverhampton South East,LAB,Lab,Labour,#dd0018,Wolverhampton South East,-30,54
+Wolverhampton West,LAB,Lab,Labour,#dd0018,Wolverhampton West,-30,53
+Worcester,CON,Con,Conservative,#005af0,Worcester,-34,53
+Worsley and Eccles,LAB,Lab,Labour,#dd0018,Worsley and Eccles,-23,52
+Worthing West,CON,Con,Conservative,#005af0,Worthing West,-44,64
+Wrexham,LAB,Lab,Labour,#dd0018,Wrexham,-30,50
+Wycombe,CON,Con,Conservative,#005af0,Wycombe,-36,58
+Wyre Forest,CON,Con,Conservative,#005af0,Wyre Forest,-33,50
+Wythenshawe and Sale East,LAB,Lab,Labour,#dd0018,Wythenshawe and Sale East,-26,53
+Yeovil,CON,Con,Conservative,#005af0,Yeovil,-42,50
+Ynys MÃ´n,LAB,Lab,Labour,#dd0018,Ynys MÃ´n,-29,46
+York Central,LAB,Lab,Labour,#dd0018,York Central,-19,60
+York Outer,CON,Con,Conservative,#005af0,York Outer,-18,61
+Aberdeen North,SNP,SNP,SNP,#fff293,Aberdeen North,-3,52
+Aberdeen South,SNP,SNP,SNP,#fff293,Aberdeen South,-4,52
+Aberdeenshire North and Moray East,SNP,SNP,SNP,#fff293,Aberdeenshire North and Moray East,-3,51
+Airdrie and Shotts,SNP,SNP,SNP,#fff293,Airdrie and Shotts,-11,50
+Alloa and Grangemouth,LAB,Lab,Labour,#dd0018,Alloa and Grangemouth,-7,50
+Angus and Perthshire Glens,SNP,SNP,SNP,#fff293,Angus and Perthshire Glens,-5,50
+Arbroath and Broughty Ferry,SNP,SNP,SNP,#fff293,Arbroath and Broughty Ferry,-5,52
+"Argyll, Bute and South Lochaber",SNP,SNP,SNP,#fff293,"Argyll, Bute and South Lochaber",-5,49
+"Ayr, Carrick and Cumnock",SNP,SNP,SNP,#fff293,"Ayr, Carrick and Cumnock",-13,49
+Bathgate and Linlithgow,SNP,SNP,SNP,#fff293,Bathgate and Linlithgow,-9,51
+"Berwickshire, Roxburgh and Selkirk",CON,Con,Conservative,#005af0,"Berwickshire, Roxburgh and Selkirk",-12,53
+"Caithness, Sutherland and Easter Ross",LIB,LD,Liberal Democrats,#ffa331,"Caithness, Sutherland and Easter Ross",-2,50
+Central Ayrshire,SNP,SNP,SNP,#fff293,Central Ayrshire,-12,48
+Coatbridge and Bellshill,SNP,SNP,SNP,#fff293,Coatbridge and Bellshill,-12,50
+Cowdenbeath and Kirkcaldy,SNP,SNP,SNP,#fff293,Cowdenbeath and Kirkcaldy,-7,52
+Cumbernauld and Kirkintilloch,SNP,SNP,SNP,#fff293,Cumbernauld and Kirkintilloch,-8,50
+Dumfries and Galloway,SNP,SNP,SNP,#fff293,Dumfries and Galloway,-13,51
+"Dumfriesshire, Clydesdale and Tweeddale",CON,Con,Conservative,#005af0,"Dumfriesshire, Clydesdale and Tweeddale",-13,52
+Dundee Central,SNP,SNP,SNP,#fff293,Dundee Central,-6,50
+Dunfermline and Dollar,SNP,SNP,SNP,#fff293,Dunfermline and Dollar,-7,51
+East Kilbride and Strathaven,SNP,SNP,SNP,#fff293,East Kilbride and Strathaven,-13,48
+East Renfrewshire,SNP,SNP,SNP,#fff293,East Renfrewshire,-11,48
+Edinburgh East and Musselburgh,SNP,SNP,SNP,#fff293,Edinburgh East and Musselburgh,-10,54
+Edinburgh North and Leith,SNP,SNP,SNP,#fff293,Edinburgh North and Leith,-9,53
+Edinburgh South,LAB,Lab,Labour,#dd0018,Edinburgh South,-10,53
+Edinburgh South West,SNP,SNP,SNP,#fff293,Edinburgh South West,-10,52
+Edinburgh West,LIB,LD,Liberal Democrats,#ffa331,Edinburgh West,-9,52
+Falkirk,SNP,SNP,SNP,#fff293,Falkirk,-8,51
+Glasgow East,SNP,SNP,SNP,#fff293,Glasgow East,-10,51
+Glasgow North,SNP,SNP,SNP,#fff293,Glasgow North,-9,49
+Glasgow North East,SNP,SNP,SNP,#fff293,Glasgow North East,-9,50
+Glasgow South,SNP,SNP,SNP,#fff293,Glasgow South,-11,49
+Glasgow South West,SNP,SNP,SNP,#fff293,Glasgow South West,-10,50
+Glasgow West,SNP,SNP,SNP,#fff293,Glasgow West,-8,49
+Glenrothes and Mid Fife,SNP,SNP,SNP,#fff293,Glenrothes and Mid Fife,-6,52
+Gordon and Buchan,SNP,SNP,SNP,#fff293,Gordon and Buchan,-4,50
+Hamilton and Clyde Valley,SNP,SNP,SNP,#fff293,Hamilton and Clyde Valley,-12,51
+Inverclyde and Renfrewshire West,LAB,Lab,Labour,#dd0018,Inverclyde and Renfrewshire West,-8,48
+"Inverness, Skye and West Ross-shire",SNP,SNP,SNP,#fff293,"Inverness, Skye and West Ross-shire",-3,49
+Kilmarnock and Loudoun,SNP,SNP,SNP,#fff293,Kilmarnock and Loudoun,-13,50
+Livingston,SNP,SNP,SNP,#fff293,Livingston,-11,51
+Lothian East,SNP,SNP,SNP,#fff293,Lothian East,-11,53
+Mid Dunbartonshire,SNP,SNP,SNP,#fff293,Mid Dunbartonshire,-7,49
+"Moray West, Nairn and Strathspey",SNP,SNP,SNP,#fff293,"Moray West, Nairn and Strathspey",-4,49
+Motherwell and Wishaw,SNP,SNP,SNP,#fff293,Motherwell and Wishaw,-12,52
+Na h-Eileanan an Iar,LAB,Lab,Labour,#dd0018,Na h-Eileanan an Iar,-2,47
+North Ayrshire and Arran,SNP,SNP,SNP,#fff293,North Ayrshire and Arran,-10,48
+North East Fife,LIB,LD,Liberal Democrats,#ffa331,North East Fife,-6,51
+Orkney and Shetland,LIB,LD,Liberal Democrats,#ffa331,Orkney and Shetland,0,51
+Paisley and Renfrewshire North,SNP,SNP,SNP,#fff293,Paisley and Renfrewshire North,-9,48
+Paisley and Renfrewshire South,SNP,SNP,SNP,#fff293,Paisley and Renfrewshire South,-10,49
+Perth and Kinross-shire,SNP,SNP,SNP,#fff293,Perth and Kinross-shire,-5,51
+Rutherglen,SNP,SNP,SNP,#fff293,Rutherglen,-12,49
+Stirling and Strathallan,SNP,SNP,SNP,#fff293,Stirling and Strathallan,-6,49
+West Aberdeenshire and Kincardine,SNP,SNP,SNP,#fff293,West Aberdeenshire and Kincardine,-4,51
+West Dunbartonshire,SNP,SNP,SNP,#fff293,West Dunbartonshire,-7,48
