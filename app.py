@@ -145,6 +145,13 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         def rotate_coords_anticlockwise(x, y):
             return -y, x
 
+        # # Define a function to calculate hexagon coordinates based on the "odd-r" formation
+        # def calc_coords(row, col):
+        #     if row % 2 == 1:
+        #         col = col + 0.5
+        #     row = row * np.sqrt(3) / 2
+        #     return col, row
+
         # Apply the flipping and rotation transformations
         constituency_df[['x_flipped', 'y_flipped']] = constituency_df.apply(lambda row: flip_coords(row['coord_one'], row['coord_two']), axis=1).apply(pd.Series)
         constituency_df[['x_rotated', 'y_rotated']] = constituency_df.apply(lambda row: rotate_coords_anticlockwise(row['x_flipped'], row['y_flipped']), axis=1).apply(pd.Series)
@@ -159,7 +166,11 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
                 y=[row['y_rotated']],
                 mode='markers',
                 marker_symbol='hexagon2',
-                marker=dict(size=18, color=row['color'], line=dict(color='black', width=0.5)),
+                marker=dict(
+                    size=18,
+                    color=row['color'],
+                    line=dict(color='black', width=0.5),
+                    angle=90),
                 text=row['constituency_name'],
                 hoverinfo='text'
             ))
@@ -168,7 +179,7 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         fig.update_layout(
             xaxis=dict(showgrid=False, zeroline=False, visible=False),
             yaxis=dict(showgrid=False, zeroline=False, visible=False),
-            plot_bgcolor='#0E1117',
+            plot_bgcolor='white',
             margin=dict(l=0, r=0, t=0, b=0),
             height=800,
             hovermode='closest',
@@ -281,7 +292,7 @@ if st.session_state["current_page"] == "Polling Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title(f"Polling Model – {election_year} Prediction")
+        st.title(f"Polling Model – {election_year} Election Prediction")
 
     display_vote_share_metrics(
         election_year,
@@ -328,7 +339,7 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title(f"Polling & Economics Model – {election_year} Prediction")
+        st.title(f"Polling & Economics Model – {election_year} Election Prediction")
 
     display_vote_share_metrics(
         election_year,
@@ -375,7 +386,7 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title(f"Polling & Social Media Model – {election_year} Prediction")
+        st.title(f"Polling & Social Media Model – {election_year} Election Prediction")
 
     display_vote_share_metrics(
         election_year,
@@ -422,7 +433,7 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title("Polls, Economics & Social Media Model")
+        st.title(f"Polls, Economics & Social Media Model – {election_year} Election Prediction")
 
     display_vote_share_metrics(
         election_year,
