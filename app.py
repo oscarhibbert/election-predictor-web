@@ -179,7 +179,7 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         fig.update_layout(
             xaxis=dict(showgrid=False, zeroline=False, visible=False),
             yaxis=dict(showgrid=False, zeroline=False, visible=False),
-            plot_bgcolor='white',
+            plot_bgcolor='#0E1117',
             margin=dict(l=0, r=0, t=0, b=0),
             height=800,
             hovermode='closest',
