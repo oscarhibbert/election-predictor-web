@@ -52,13 +52,13 @@ if st.sidebar.button("Polls, Economics & Social Media Model"):
 
 # Party Colors
 party_colors = {
-    "Labour": "#dd0018",
     "Conservative": "#005af0",
-    "SNP": "#fff293",
+    "Labour": "#dd0018",
+    "Green": "#00bc3e",
     "Liberal Democrats": "#ffa331",
     "Plaid Cymru": "#00d4a7",
+    "SNP": "#fff293",
     "UKIP": "#480c64",
-    "Green": "#00bc3e",
     "Others": "#909090"
 }
 
