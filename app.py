@@ -156,7 +156,7 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
                 y=[row['y_rotated']],
                 mode='markers',
                 marker_symbol='hexagon2',
-                marker=dict(size=18, color=row['color'], line=dict(color='black', width=0.5)),
+                marker=dict(size=16, color=row['color'], line=dict(color='black', width=0.5)),
                 text=row['constituency_name'],
                 hoverinfo='text'
             ))
