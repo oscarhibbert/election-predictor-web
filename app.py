@@ -16,6 +16,9 @@ st.markdown(
         max-width: 220px;
         padding: 10px;
     }
+
+    footer {visibility: hidden;}
+
     </style>
     """,
     unsafe_allow_html=True
@@ -98,7 +101,7 @@ def election_year_slider():
 
     return election_year
 
-# Hexmap Page Template
+# Hexmap Logic
 def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, data_path_2017:str,
                    data_path_2019:str, data_path_2024:str):
     """
@@ -165,13 +168,12 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         fig.update_layout(
             xaxis=dict(showgrid=False, zeroline=False, visible=False),
             yaxis=dict(showgrid=False, zeroline=False, visible=False),
-            plot_bgcolor='white',
+            plot_bgcolor='#0E1117',
             margin=dict(l=0, r=0, t=0, b=0),
             height=800,
             hovermode='closest',
             showlegend=False
         )
-
 
         st.plotly_chart(fig)
 
@@ -202,7 +204,7 @@ def display_constituency_seat_metrics(election_year, label, data_path_2010:str, 
         actuals_party_count_df = pd.read_csv(actuals_csv_path)
         actuals_party_count = dict(zip(actuals_party_count_df['Party'], actuals_party_count_df['Total_Constituencies']))
 
-    st.write(label)
+    st.subheader(label)
     cols = st.columns(len(predicted_party_count))
     for i, (party_name, predicted_count) in enumerate(predicted_party_count.items()):
         if election_year in [2024]:
@@ -241,7 +243,7 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
         actuals_party_share_df = pd.read_csv(actuals_csv_path)
         actuals_party_share = dict(zip(actuals_party_share_df['Party'], actuals_party_share_df['Vote_Share']))
 
-    st.write(label)
+    st.subheader(label)
     cols = st.columns(len(predicted_party_share))
     for i, (party_name, predicted_share) in enumerate(predicted_party_share.items()):
         if election_year in [2024]:
@@ -276,10 +278,20 @@ if st.session_state["current_page"] == "Methodology":
 if st.session_state["current_page"] == "Polling Model":
     col1, col2, col3 = st.columns([1,3,1])
 
-    with col2:
-        st.title("Polling Model")
-
     election_year = election_year_slider()
+
+    with col2:
+        st.title(f"Polling Model – {election_year} Prediction")
+
+    display_vote_share_metrics(
+        election_year,
+        f"National Vote Share",
+        "data/polls_model/vote_share/polls_model_vote_share_2010.csv",
+        "data/polls_model/vote_share/polls_model_vote_share_2015.csv",
+        "data/polls_model/vote_share/polls_model_vote_share_2017.csv",
+        "data/polls_model/vote_share/polls_model_vote_share_2019.csv",
+        "data/polls_model/vote_share/polls_model_vote_share_2024.csv",
+    )
 
     display_constituency_seat_metrics(
         election_year,
@@ -289,16 +301,6 @@ if st.session_state["current_page"] == "Polling Model":
         "data/polls_model/seat_share/polls_model_seat_share_2017.csv",
         "data/polls_model/seat_share/polls_model_seat_share_2019.csv",
         "data/polls_model/seat_share/polls_model_seat_share_2024.csv",
-    )
-
-    display_vote_share_metrics(
-        election_year,
-        "National Vote Share",
-        "data/polls_model/vote_share/polls_model_vote_share_2010.csv",
-        "data/polls_model/vote_share/polls_model_vote_share_2015.csv",
-        "data/polls_model/vote_share/polls_model_vote_share_2017.csv",
-        "data/polls_model/vote_share/polls_model_vote_share_2019.csv",
-        "data/polls_model/vote_share/polls_model_vote_share_2024.csv",
     )
 
     display_legend(
@@ -323,20 +325,10 @@ if st.session_state["current_page"] == "Polling Model":
 elif st.session_state["current_page"] == "Polling + Econ Model":
     col1, col2, col3 = st.columns([1,3,1])
 
-    with col2:
-        st.title("Polling & Economics Model")
-
     election_year = election_year_slider()
 
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2010.csv",
-        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2015.csv",
-        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2017.csv",
-        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2019.csv",
-        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2024.csv",
-    )
+    with col2:
+        st.title(f"Polling & Economics Model – {election_year} Prediction")
 
     display_vote_share_metrics(
         election_year,
@@ -346,6 +338,16 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
         "data/polls_econ_model/vote_share/polls_model_econ_vote_share_2017.csv",
         "data/polls_econ_model/vote_share/polls_model_econ_vote_share_2019.csv",
         "data/polls_econ_model/vote_share/polls_model_econ_vote_share_2024.csv",
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2010.csv",
+        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2015.csv",
+        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2017.csv",
+        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2019.csv",
+        "data/polls_econ_model/seat_share/polls_model_econ_seat_share_2024.csv",
     )
 
     display_legend(
@@ -370,20 +372,10 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
 elif st.session_state["current_page"] == "Polling + Social Media Model":
     col1, col2, col3 = st.columns([1,3,1])
 
-    with col2:
-        st.title("Polling & Social Media Model")
-
     election_year = election_year_slider()
 
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2010.csv",
-        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2015.csv",
-        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2017.csv",
-        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2019.csv",
-        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2024.csv",
-    )
+    with col2:
+        st.title(f"Polling & Social Media Model – {election_year} Prediction")
 
     display_vote_share_metrics(
         election_year,
@@ -393,6 +385,16 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
         "data/polls_alt_model/vote_share/polls_alt_model_vote_share_2017.csv",
         "data/polls_alt_model/vote_share/polls_alt_model_vote_share_2019.csv",
         "data/polls_alt_model/vote_share/polls_alt_model_vote_share_2024.csv",
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2010.csv",
+        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2015.csv",
+        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2017.csv",
+        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2019.csv",
+        "data/polls_alt_model/seat_share/polls_alt_model_seat_share_2024.csv",
     )
 
     display_legend(
@@ -417,21 +419,10 @@ elif st.session_state["current_page"] == "Polling + Social Media Model":
 elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
     col1, col2, col3 = st.columns([1,3,1])
 
-    with col2:
-        st.title("Polls, Economics & Social Media Model")
-
     election_year = election_year_slider()
 
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2010.csv",
-        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2015.csv",
-        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2017.csv",
-        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2019.csv",
-        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2024.csv",
-    )
-
+    with col2:
+        st.title("Polls, Economics & Social Media Model")
 
     display_vote_share_metrics(
         election_year,
@@ -441,6 +432,16 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
         "data/polls_econ_alt_model/vote_share/polls_eco_alt_model_vote_share_2017.csv",
         "data/polls_econ_alt_model/vote_share/polls_eco_alt_model_vote_share_2019.csv",
         "data/polls_econ_alt_model/vote_share/polls_eco_alt_model_vote_share_2024.csv",
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2010.csv",
+        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2015.csv",
+        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2017.csv",
+        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2019.csv",
+        "data/polls_econ_alt_model/seat_share/polls_eco_alt_model_seat_share_2024.csv",
     )
 
     display_legend(
