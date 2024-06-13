@@ -277,7 +277,7 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
             else:
                 st.metric(label=party_code, value=f"{mean_average}%", delta=f"{delta}%", delta_color=delta_color)
 
-# Render pages
+# Handle rendering of pages
 
 # Introduction Page
 if st.session_state["current_page"] == "Introduction":
