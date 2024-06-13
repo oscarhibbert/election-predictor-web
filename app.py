@@ -308,31 +308,222 @@ if st.session_state["current_page"] == "Polling Model":
 elif st.session_state["current_page"] == "Polling + Eco Model":
     st.title("Polling + Eco Model")
     election_year = election_year_slider()
+
     display_legend(election_year)
-    display_hexmap(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
     st.title("Polling + Eco + Alt Data")
     election_year = election_year_slider()
+
     display_legend(election_year)
-    display_hexmap(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
     st.title("Polling + Eco + Alt Sentiment")
     election_year = election_year_slider()
+
     display_legend(election_year)
-    display_hexmap(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
 
 # Methodology Page
 elif st.session_state["current_page"] == "Methodology":
     st.title("Methodology")
+    election_year = election_year_slider()
+
+    display_legend(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
 
 # Data Page
 elif st.session_state["current_page"] == "Data":
     st.title("Data")
 
+    election_year = election_year_slider()
+
+    display_legend(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
+
 # Charts Page
 elif st.session_state["current_page"] == "Charts":
     st.title("Charts")
+
+    election_year = election_year_slider()
+
+    display_legend(election_year)
+
+    display_hexmap(
+        election_year,
+        "data/constituencies/ge_2010_constituencies.csv",
+        "data/constituencies/ge_2015_constituencies.csv",
+        "data/constituencies/ge_2017_constituencies.csv",
+        "data/constituencies/ge_2019_constituencies.csv",
+        "data/constituencies/ge_2024_constituencies.csv"
+    )
+
+    display_constituency_seat_metrics(
+        election_year,
+        "Constituency Seat Count",
+        "data/party_count/ge_2010_party_count.csv",
+        "data/party_count/ge_2015_party_count.csv",
+        "data/party_count/ge_2017_party_count.csv",
+        "data/party_count/ge_2019_party_count.csv",
+        "data/party_count/ge_2024_party_count.csv",
+    )
+
+
+    display_vote_share_metrics(
+        election_year,
+        "National Vote Share",
+        "data/vote_share/ge_2010_vote_share.csv",
+        "data/vote_share/ge_2015_vote_share.csv",
+        "data/vote_share/ge_2017_vote_share.csv",
+        "data/vote_share/ge_2019_vote_share.csv",
+        "data/vote_share/ge_2024_vote_share.csv",
+    )
