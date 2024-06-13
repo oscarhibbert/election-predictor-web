@@ -176,14 +176,6 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
         st.plotly_chart(fig)
 
 # Scorecards
-import pandas as pd
-from pathlib import Path
-import streamlit as st
-
-import pandas as pd
-from pathlib import Path
-import streamlit as st
-
 def display_constituency_seat_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
                                       data_path_2019:str, data_path_2024:str):
 
@@ -223,8 +215,6 @@ def display_constituency_seat_metrics(election_year, label, data_path_2010:str, 
             with cols[i]:
                 st.metric(label=party_name, value=predicted_count, delta=delta, delta_color=delta_color)
 
-
-
 def display_vote_share_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
                                       data_path_2019:str, data_path_2024:str):
 
@@ -263,6 +253,7 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
             delta_color = "normal" if delta != 0 else "off"
             with cols[i]:
                 st.metric(label=party_name, value=str(predicted_share) + "%", delta=delta, delta_color=delta_color)
+
 
 # Handle rendering of pages
 
