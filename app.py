@@ -4,6 +4,21 @@ import numpy as np
 import plotly.graph_objects as go
 from pathlib import Path
 
+# Custom CSS to increase the width of the metric containers
+st.markdown(
+    """
+    <style>
+    [data-testid="metric-container"] {
+        width: 100%;
+        min-width: 200px;
+        max-width: 220px;
+        padding: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def set_page(page_name):
     st.session_state["current_page"] = page_name
 
