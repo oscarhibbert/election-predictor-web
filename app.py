@@ -4,6 +4,8 @@ import numpy as np
 import plotly.graph_objects as go
 from pathlib import Path
 
+st.set_page_config(layout="wide")
+
 # Custom CSS to increase the width of the metric containers
 st.markdown(
     """
@@ -27,23 +29,26 @@ if "current_page" not in st.session_state:
     st.session_state["current_page"] = "Introduction"
 
 # Pages Menu
-st.sidebar.title("Navigation")
+st.sidebar.title("UK General Election Predictor")
+st.sidebar.header("About")
 if st.sidebar.button("Introduction"):
     set_page("Introduction")
-if st.sidebar.button("Polling Model"):
-    set_page("Polling Model")
-if st.sidebar.button("Polling + Eco Model"):
-    set_page("Polling + Eco Model")
-if st.sidebar.button("Polling + Eco + Alt Data"):
-    set_page("Polling + Eco + Alt Data")
-if st.sidebar.button("Polling + Eco + Alt Sentiment"):
-    set_page("Polling + Eco + Alt Sentiment")
 if st.sidebar.button("Methodology"):
     set_page("Methodology")
-if st.sidebar.button("Data"):
-    set_page("Data")
-if st.sidebar.button("Charts"):
-    set_page("Charts")
+
+st.sidebar.header("Models")
+if st.sidebar.button("Polls Model"):
+    set_page("Polling Model")
+if st.sidebar.button("Polls & Econ Model"):
+    set_page("Polling + Eco Model")
+if st.sidebar.button("Polls, Econ, Alt Model"):
+    set_page("Polling + Eco + Alt Data")
+if st.sidebar.button("Polls, Econ, Alt, Sent Model"):
+    set_page("Polling + Eco + Alt Sentiment")
+# if st.sidebar.button("Data"):
+#     set_page("Data")
+# if st.sidebar.button("Charts"):
+#     set_page("Charts")
 
 # Party Colors
 party_colors = {
@@ -75,19 +80,15 @@ def display_legend(election_year):
             legend_html += f"<span style='font-size:20px; color:{color};'>⬣</span> <span style='font-size:15px;'>{party}</span> &nbsp;&nbsp;&nbsp;"
     st.markdown(f"<div style='display: flex; justify-content: center; align-items: center;'>{legend_html}</div>", unsafe_allow_html=True)
 
-# Intro Page
-if st.session_state["current_page"] == "Introduction":
-    st.title("Introduction")
-    st.write("""
-        Welcome to the UK Electoral Map Project!
-
-        There is nothing here YET... go away!
-    """)
-
 # Handle slider for election year
 def election_year_slider():
     # Slider
-    election_year = st.select_slider('Select election year:', options=[2010, 2015, 2017, 2019, 2024])
+    col1, col2, col3 = st.columns([1,3,1])
+
+    election_year = None
+
+    with col2:
+        election_year = st.select_slider('Select election year:', options=[2010, 2015, 2017, 2019, 2024])
 
     return election_year
 
@@ -106,61 +107,65 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
 
     :return: Hexmap.
     """
+    col1, col2, col3 = st.columns([1,3,1])
 
-    # CSV Path Variable
-    csv_path = None
 
-    # Loading CSVs
-    if election_year == 2010:
-        csv_path = data_path_2010
-    elif election_year == 2015:
-        csv_path = data_path_2015
-    elif election_year == 2017:
-        csv_path = data_path_2017
-    elif election_year == 2019:
-        csv_path = data_path_2019
-    elif election_year == 2024:
-        csv_path = data_path_2024
+    with col2:
 
-    constituency_df = pd.read_csv(csv_path)
+        # CSV Path Variable
+        csv_path = None
 
-    # Define a function to calculate hexagon coordinates based on the "odd-r" formation
-    def calc_coords(row, col):
-        if row % 2 == 1:
-            col = col + 0.5
-        row = row * np.sqrt(3) / 2
-        return col, row
+        # Loading CSVs
+        if election_year == 2010:
+            csv_path = data_path_2010
+        elif election_year == 2015:
+            csv_path = data_path_2015
+        elif election_year == 2017:
+            csv_path = data_path_2017
+        elif election_year == 2019:
+            csv_path = data_path_2019
+        elif election_year == 2024:
+            csv_path = data_path_2024
 
-    # Generate hexagon coordinates
-    constituency_df['coords'] = constituency_df.apply(lambda row: calc_coords(row['coord_two'], row['coord_one']), axis=1)
-    constituency_df[['x', 'y']] = pd.DataFrame(constituency_df['coords'].tolist(), index=constituency_df.index)
+        constituency_df = pd.read_csv(csv_path)
 
-    fig = go.Figure()
+        # Define a function to calculate hexagon coordinates based on the "odd-r" formation
+        def calc_coords(row, col):
+            if row % 2 == 1:
+                col = col + 0.5
+            row = row * np.sqrt(3) / 2
+            return col, row
 
-    # Add hexagons to the figure
-    for _, row in constituency_df.iterrows():
-        fig.add_trace(go.Scatter(
-            x=[row['x']],
-            y=[row['y']],
-            mode='markers',
-            marker_symbol='hexagon2',
-            marker=dict(size=18, color=row['color'], line=dict(color='black', width=0.5)),
-            text=row['constituency_name'],
-            hoverinfo='text'
-        ))
+        # Generate hexagon coordinates
+        constituency_df['coords'] = constituency_df.apply(lambda row: calc_coords(row['coord_two'], row['coord_one']), axis=1)
+        constituency_df[['x', 'y']] = pd.DataFrame(constituency_df['coords'].tolist(), index=constituency_df.index)
 
-    # Update layout
-    fig.update_layout(
-        xaxis=dict(showgrid=False, zeroline=False, visible=False),
-        yaxis=dict(showgrid=False, zeroline=False, visible=False),
-        plot_bgcolor='white',
-        margin=dict(l=0, r=0, t=0, b=0),
-        height=800,
-        hovermode='closest',
-        showlegend=False
-    )
+        fig = go.Figure()
 
-    st.plotly_chart(fig)
+        # Add hexagons to the figure
+        for _, row in constituency_df.iterrows():
+            fig.add_trace(go.Scatter(
+                x=[row['x']],
+                y=[row['y']],
+                mode='markers',
+                marker_symbol='hexagon2',
+                marker=dict(size=18, color=row['color'], line=dict(color='black', width=0.5)),
+                text=row['constituency_name'],
+                hoverinfo='text'
+            ))
+
+        # Update layout
+        fig.update_layout(
+            xaxis=dict(showgrid=False, zeroline=False, visible=False),
+            yaxis=dict(showgrid=False, zeroline=False, visible=False),
+            plot_bgcolor='white',
+            margin=dict(l=0, r=0, t=0, b=0),
+            height=800,
+            hovermode='closest',
+            showlegend=False
+        )
+
+        st.plotly_chart(fig)
 
 # Scorecards
 def display_constituency_seat_metrics(election_year, label, data_path_2010:str, data_path_2015:str, data_path_2017:str,
@@ -264,11 +269,30 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
             else:
                 st.metric(label=party_code, value=f"{mean_average}%", delta=f"{delta}%", delta_color=delta_color)
 
+# Render pages
 
-#TODO Provide CSV paths in display_hexmap function params for each page
+# Introduction Page
+if st.session_state["current_page"] == "Introduction":
+    st.title("Introduction")
+    st.write("""
+        Welcome to the UK Electoral Map Project!
+
+        There is nothing here YET... go away!
+    """)
+
+# Methodology Page
+if st.session_state["current_page"] == "Methodology":
+    st.title("Methodology")
+    st.write("""
+        Methodology Page.
+    """)
+
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
-    st.title("Polling Model")
+    col1, col2, col3 = st.columns([1,3,1])
+
+    with col2:
+        st.title("Polling Model")
 
     election_year = election_year_slider()
 
@@ -306,7 +330,11 @@ if st.session_state["current_page"] == "Polling Model":
 
 # Polling + Eco Model Page
 elif st.session_state["current_page"] == "Polling + Eco Model":
-    st.title("Polling + Eco Model")
+    col1, col2, col3 = st.columns([1,3,1])
+
+    with col2:
+        st.title("Polling + Eco Model")
+
     election_year = election_year_slider()
 
     display_legend(election_year)
@@ -343,7 +371,11 @@ elif st.session_state["current_page"] == "Polling + Eco Model":
 
 # Polling + Eco + Alt Data Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
-    st.title("Polling + Eco + Alt Data")
+    col1, col2, col3 = st.columns([1,3,1])
+
+    with col2:
+        st.title("Polling + Eco + Alt Data")
+
     election_year = election_year_slider()
 
     display_legend(election_year)
@@ -366,7 +398,6 @@ elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
         "data/party_count/ge_2019_party_count.csv",
         "data/party_count/ge_2024_party_count.csv",
     )
-
 
     display_vote_share_metrics(
         election_year,
@@ -380,81 +411,10 @@ elif st.session_state["current_page"] == "Polling + Eco + Alt Data":
 
 # Polling + Eco + Alt Sentiment Page
 elif st.session_state["current_page"] == "Polling + Eco + Alt Sentiment":
-    st.title("Polling + Eco + Alt Sentiment")
-    election_year = election_year_slider()
+    col1, col2, col3 = st.columns([1,3,1])
 
-    display_legend(election_year)
-
-    display_hexmap(
-        election_year,
-        "data/constituencies/ge_2010_constituencies.csv",
-        "data/constituencies/ge_2015_constituencies.csv",
-        "data/constituencies/ge_2017_constituencies.csv",
-        "data/constituencies/ge_2019_constituencies.csv",
-        "data/constituencies/ge_2024_constituencies.csv"
-    )
-
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/party_count/ge_2010_party_count.csv",
-        "data/party_count/ge_2015_party_count.csv",
-        "data/party_count/ge_2017_party_count.csv",
-        "data/party_count/ge_2019_party_count.csv",
-        "data/party_count/ge_2024_party_count.csv",
-    )
-
-
-    display_vote_share_metrics(
-        election_year,
-        "National Vote Share",
-        "data/vote_share/ge_2010_vote_share.csv",
-        "data/vote_share/ge_2015_vote_share.csv",
-        "data/vote_share/ge_2017_vote_share.csv",
-        "data/vote_share/ge_2019_vote_share.csv",
-        "data/vote_share/ge_2024_vote_share.csv",
-    )
-
-# Methodology Page
-elif st.session_state["current_page"] == "Methodology":
-    st.title("Methodology")
-    election_year = election_year_slider()
-
-    display_legend(election_year)
-
-    display_hexmap(
-        election_year,
-        "data/constituencies/ge_2010_constituencies.csv",
-        "data/constituencies/ge_2015_constituencies.csv",
-        "data/constituencies/ge_2017_constituencies.csv",
-        "data/constituencies/ge_2019_constituencies.csv",
-        "data/constituencies/ge_2024_constituencies.csv"
-    )
-
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/party_count/ge_2010_party_count.csv",
-        "data/party_count/ge_2015_party_count.csv",
-        "data/party_count/ge_2017_party_count.csv",
-        "data/party_count/ge_2019_party_count.csv",
-        "data/party_count/ge_2024_party_count.csv",
-    )
-
-
-    display_vote_share_metrics(
-        election_year,
-        "National Vote Share",
-        "data/vote_share/ge_2010_vote_share.csv",
-        "data/vote_share/ge_2015_vote_share.csv",
-        "data/vote_share/ge_2017_vote_share.csv",
-        "data/vote_share/ge_2019_vote_share.csv",
-        "data/vote_share/ge_2024_vote_share.csv",
-    )
-
-# Data Page
-elif st.session_state["current_page"] == "Data":
-    st.title("Data")
+    with col2:
+        st.title("Polling + Eco + Alt Sentiment")
 
     election_year = election_year_slider()
 
@@ -490,40 +450,82 @@ elif st.session_state["current_page"] == "Data":
         "data/vote_share/ge_2024_vote_share.csv",
     )
 
-# Charts Page
-elif st.session_state["current_page"] == "Charts":
-    st.title("Charts")
+# # Data Page
+# elif st.session_state["current_page"] == "Data":
+#     col1, col2, col3 = st.columns([1,3,1])
 
-    election_year = election_year_slider()
+#     with col2:
+#         st.title("Data")
 
-    display_legend(election_year)
+#     election_year = election_year_slider()
 
-    display_hexmap(
-        election_year,
-        "data/constituencies/ge_2010_constituencies.csv",
-        "data/constituencies/ge_2015_constituencies.csv",
-        "data/constituencies/ge_2017_constituencies.csv",
-        "data/constituencies/ge_2019_constituencies.csv",
-        "data/constituencies/ge_2024_constituencies.csv"
-    )
+#     display_legend(election_year)
 
-    display_constituency_seat_metrics(
-        election_year,
-        "Constituency Seat Count",
-        "data/party_count/ge_2010_party_count.csv",
-        "data/party_count/ge_2015_party_count.csv",
-        "data/party_count/ge_2017_party_count.csv",
-        "data/party_count/ge_2019_party_count.csv",
-        "data/party_count/ge_2024_party_count.csv",
-    )
+#     display_hexmap(
+#         election_year,
+#         "data/constituencies/ge_2010_constituencies.csv",
+#         "data/constituencies/ge_2015_constituencies.csv",
+#         "data/constituencies/ge_2017_constituencies.csv",
+#         "data/constituencies/ge_2019_constituencies.csv",
+#         "data/constituencies/ge_2024_constituencies.csv"
+#     )
+
+#     display_constituency_seat_metrics(
+#         election_year,
+#         "Constituency Seat Count",
+#         "data/party_count/ge_2010_party_count.csv",
+#         "data/party_count/ge_2015_party_count.csv",
+#         "data/party_count/ge_2017_party_count.csv",
+#         "data/party_count/ge_2019_party_count.csv",
+#         "data/party_count/ge_2024_party_count.csv",
+#     )
 
 
-    display_vote_share_metrics(
-        election_year,
-        "National Vote Share",
-        "data/vote_share/ge_2010_vote_share.csv",
-        "data/vote_share/ge_2015_vote_share.csv",
-        "data/vote_share/ge_2017_vote_share.csv",
-        "data/vote_share/ge_2019_vote_share.csv",
-        "data/vote_share/ge_2024_vote_share.csv",
-    )
+#     display_vote_share_metrics(
+#         election_year,
+#         "National Vote Share",
+#         "data/vote_share/ge_2010_vote_share.csv",
+#         "data/vote_share/ge_2015_vote_share.csv",
+#         "data/vote_share/ge_2017_vote_share.csv",
+#         "data/vote_share/ge_2019_vote_share.csv",
+#         "data/vote_share/ge_2024_vote_share.csv",
+#     )
+
+# # Charts Page
+# elif st.session_state["current_page"] == "Charts":
+
+    # st.title("Charts")
+
+    # election_year = election_year_slider()
+
+    # display_legend(election_year)
+
+    # display_hexmap(
+    #     election_year,
+    #     "data/constituencies/ge_2010_constituencies.csv",
+    #     "data/constituencies/ge_2015_constituencies.csv",
+    #     "data/constituencies/ge_2017_constituencies.csv",
+    #     "data/constituencies/ge_2019_constituencies.csv",
+    #     "data/constituencies/ge_2024_constituencies.csv"
+    # )
+
+    # display_constituency_seat_metrics(
+    #     election_year,
+    #     "Constituency Seat Count",
+    #     "data/party_count/ge_2010_party_count.csv",
+    #     "data/party_count/ge_2015_party_count.csv",
+    #     "data/party_count/ge_2017_party_count.csv",
+    #     "data/party_count/ge_2019_party_count.csv",
+    #     "data/party_count/ge_2024_party_count.csv",
+    # )
+
+
+    # display_vote_share_metrics(
+    #     election_year,
+    #     "National Vote Share",
+    #     "data/vote_share/ge_2010_vote_share.csv",
+    #     "data/vote_share/ge_2015_vote_share.csv",
+    #     "data/vote_share/ge_2017_vote_share.csv",
+    #     "data/vote_share/ge_2019_vote_share.csv",
+    #     "data/vote_share/ge_2024_vote_share.csv",
+    # )
