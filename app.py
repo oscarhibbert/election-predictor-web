@@ -16,7 +16,7 @@ st.markdown(
         max-width: 220px;
         padding: 10px;
     }
-    
+
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
 
@@ -30,7 +30,7 @@ def set_page(page_name):
 
 # Always Start on "Polling + Econ + Social Media Model"
 if "current_page" not in st.session_state:
-    st.session_state["current_page"] = "Polling + Econ + Social Media Model"
+    st.session_state["current_page"] = "Polling + Social Media Model"
 
 
 def set_page(page_name):
@@ -51,11 +51,11 @@ if st.sidebar.button("Methodology"):
 st.sidebar.header("Models")
 if st.sidebar.button("Polls Model"):
     set_page("Polling Model")
-if st.sidebar.button("Polls & Economics Model"):
+if st.sidebar.button("Polls & Economic Model"):
     set_page("Polling + Econ Model")
 if st.sidebar.button("Polls & Social Media Model"):
     set_page("Polling + Social Media Model")
-if st.sidebar.button("Polls, Economics & Social Media Model"):
+if st.sidebar.button("Polls, Economic & Social Media Model"):
     set_page("Polling + Econ + Social Media Model")
 # if st.sidebar.button("Data"):
 #     set_page("Data")
@@ -425,7 +425,7 @@ elif st.session_state["current_page"] == "Polling + Econ Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title(f"Polling & Economics Model – {election_year} Election Prediction")
+        st.title(f"Polling & Economic Model – {election_year} Election Prediction")
 
     st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
 
@@ -535,7 +535,7 @@ elif st.session_state["current_page"] == "Polling + Econ + Social Media Model":
     election_year = election_year_slider()
 
     with col2:
-        st.title(f"Polls, Economics & Social Media Model – {election_year} Election Prediction")
+        st.title(f"Polls, Economic & Social Media Model – {election_year} Election Prediction")
 
     st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)
 
