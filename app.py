@@ -41,7 +41,7 @@ if "current_page" not in st.session_state:
     st.session_state["current_page"] = "Introduction"
 
 # Pages Menu
-st.sidebar.title("UK General Election Predictor")
+st.sidebar.title("Precision Scoped | UK General Election Predictor")
 st.sidebar.header("About")
 if st.sidebar.button("Introduction"):
     set_page("Introduction")
@@ -285,11 +285,16 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
 # Introduction Page
 if st.session_state["current_page"] == "Introduction":
     st.title("Introduction")
-    st.write(
+    st.markdown(
             """
-            With the UK general election only weeks away, we attempt to forecast the outcome of elections using a combination of polling data, economic indicators as well as social media data.
+            With the UK general election three weeks away, we have built four models to forecast the outcome based on a combination of polls, economic indicators and social media trends.
 
-            You can view the results of all our different models for the 2010, 2015, 2017, 2019 and 2024 election years.
+            We back-tested our models on the past four elections (2010, 2015, 2017 and 2019) and one month prior to the election, we were able to predict the outcome and top five parties for three of the four elections.
+
+            For 2019 our polls, economic and social media model outperforms the final predictions of the Savanta ComRes, YouGov and FocalData MRP models.
+            Please explore our 2024 predictions [here](https://election-predictor.streamlit.app/~/+/#5985c666).
+
+            For commercial and partnership enquiries you can contact us [here](mailto:precisionscoped@gmail.com).
             """
         )
 
