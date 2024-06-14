@@ -16,7 +16,8 @@ st.markdown(
         max-width: 220px;
         padding: 10px;
     }
-
+    
+    #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
 
     </style>
