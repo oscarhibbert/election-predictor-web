@@ -191,7 +191,8 @@ def display_hexmap(election_year:int, data_path_2010:str, data_path_2015:str, da
             margin=dict(l=0, r=0, t=0, b=0),
             height=800,
             hovermode='closest',
-            showlegend=False
+            showlegend=False,
+            dragmode=False
         )
 
         st.plotly_chart(fig)
