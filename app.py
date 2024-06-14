@@ -284,18 +284,83 @@ def display_vote_share_metrics(election_year, label, data_path_2010:str, data_pa
 # Introduction Page
 if st.session_state["current_page"] == "Introduction":
     st.title("Introduction")
-    st.write("""
-        Welcome to the UK Electoral Map Project!
+    st.write(
+            """
+            With the UK general election only weeks away, we attempt to forecast the outcome of elections using a combination of polling data, economic indicators as well as social media data.
 
-        There is nothing here YET... go away!
-    """)
+            You can view the results of all our different models for the 2010, 2015, 2017, 2019 and 2024 election years.
+            """
+        )
 
 # Methodology Page
 if st.session_state["current_page"] == "Methodology":
     st.title("Methodology")
-    st.write("""
-        Methodology Page.
-    """)
+
+    st.header("Data Sources")
+
+    st.write(
+        """
+        For the various predictions we create, we use three main data sources:
+
+        - Polling data from UK Data Election Vault
+        - Economic indicators from the Office National Statistics
+        - Google Trends search volumes for all main political parties
+
+        For economic indicators we use ONS data for GDP, Inflation and Unemployment from January 2004.. Some of these are released monthly, others only quarterly. We clean the data so we have a consistent cadence and are able to add economic indicators at the time of each poll that is conducted.
+
+        Google Trends data consists of a monthly index of search volumes for the main political parties since January 2004. We saw the highest overall search volume for the Labour party in 2017, all other months and parties are indexed against this peak.
+
+        We preprocessed all features by fitting the preprocessor on our training data, and then transforming both training and testing data so it is ready to be passed on to our model.
+        """
+    )
+
+    st.header("Modelling")
+
+    st.subheader("Polls Average")
+
+    st.write(
+        """
+        As the name suggests, this model takes the average of all polls over the last 30 days and outputs a vote share per party. This is considered our baseline model, and the one we try to improve by using more advanced estimation techniques and adding on additional data.
+        """
+    )
+
+    st.subheader("Polls XGBoost Regressor Model")
+
+    st.write(
+        """
+        Our first model to improve the baseline is an XGBoost model trained on just the polling data. XGBoost is a machine learning algorithm that belongs to the ensemble learning category, specifically the gradient boosting framework. It utilises decision trees as base learners and employs regularisation techniques to enhance model generalisation.
+
+        We run separate models per party to predict each party’s vote share for that particular election, trained on data up to and including the previous election.
+        """
+    )
+
+    st.subheader("Polls & Economic XGBoost Regressor Model")
+
+    st.write(
+        """
+        This model is the same as the polling model, with the addition of inflation data. Again we run a model per party per election to get to a vote share.
+
+        As hypothesised, we found that adding GDP and unemployment in addition to inflation did not yield any additional results due to high collinearity between these features.
+        """
+    )
+
+    st.subheader("Polls & Social Media XGBoost Regressor Model")
+
+    st.write(
+        """
+        This model takes the polling data as well as Google Trends data. We include Google Trends data for all the main parties, to ensure we take into account relative search volumes to identify shifts in voting intention.
+        """
+    )
+
+    st.subheader("Polls, Economic & Social Media XGBoost Regressor Model")
+
+    st.write(
+        """
+        This model takes polling data, economic indicators as well as Google Trends data as features and predicts party vote share for each of the elections.
+        """
+    )
+
+
 
 # Polling Model Page
 if st.session_state["current_page"] == "Polling Model":
