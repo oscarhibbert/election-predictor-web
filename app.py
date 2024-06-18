@@ -41,7 +41,7 @@ if "current_page" not in st.session_state:
     st.session_state["current_page"] = "Introduction"
 
 # Pages Menu
-st.sidebar.title("Precision Scoped | UK General Election Predictor")
+st.sidebar.title("Precision Scope | UK General Election Predictor")
 st.sidebar.header("About")
 if st.sidebar.button("Introduction"):
     set_page("Introduction")
